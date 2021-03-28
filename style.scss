@@ -1,0 +1,316 @@
+---
+layout: null
+sitemap: false
+---
+
+$sidebar-width: 275px;
+$topbar-height: 155px;
+$topmenu-trigger-width: 750px;
+
+body, td, p, div {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    @media (max-width: $topmenu-trigger-width) {
+        overflow-x: hidden;
+    }
+    @media (min-width: $topmenu-trigger-width) {
+        padding: 0 0 0 $sidebar-width;
+    }
+}
+
+.darkbg {
+    background: #edf8ec;
+}
+
+.medbg {
+    background: #edf8ec;
+}
+
+.ltbg, a.curpage {
+    background: white;
+}
+
+.full-height {
+    margin: 0em 0em 0em 0em;
+    height: 100%;
+}
+
+.noxscroll {
+    overflow-x: hidden;
+}
+
+.blacktext {
+    color: #000000;
+}
+a.blacktext:visited {color: #000000; }
+a.blacktext:hover {color: #880000; }
+
+header.sidebar {
+    margin: 0em 0em 0em 0em;
+    white-space: nowrap;
+    position: absolute;
+    width: $sidebar-width;
+    height: 100vh;
+    overflow-x: hidden;
+    left: 0px;
+    border-right: 3px ridge #edf8ec;
+    border-bottom: 0px;
+    @media (max-width: $topmenu-trigger-width) {
+        position: static;
+        top: 0px;
+        height: $topbar-height;
+        width: 100vw;
+        overflow-x: visible;
+        border-right: 0px;
+        border-bottom: 3px ridge #edf8ec;
+    }
+}
+
+// Override the inside-<section> Chrome/Firefox rules for h1.
+h1 { font-size: 2em }
+
+h1, h2, h3 {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section.content {
+    margin: 0em 0em 0em 0em;
+    @media (min-width: $topmenu-trigger-width) {
+        height: 100%;
+        // For the side bar, we scroll just the content.
+        // (For top bar we scroll the whole body.)
+        overflow-y: scroll;
+    }
+}
+
+div.content {
+    margin: 1em 1em 1em 1em;
+    @media (min-width: $topmenu-trigger-width) {
+        height: 100%;
+    }
+}
+
+p.margins { margin: 0.5em 0.5em 0.5em 0.5em; }
+
+div.logo {
+    text-align: center;
+    @media (max-width: $topmenu-trigger-width) {
+        text-align: left;
+        display: inline-block;
+    }
+}
+img.logo {
+    width: 245px;
+    height: 245px;
+    text-align: center;
+    margin: 5px 0px 5px 0px;
+    @media (max-width: $topmenu-trigger-width) {
+        width: 149px;
+        height: 149px;
+        margin: 3px 5px 3px 5px;
+    }
+}
+
+div.subtitle {
+    color: #000000; 
+    text-decoration: none;
+    font-size: 90%;
+    margin: auto;
+    text-align: center;
+    font-style: italic;
+    @media (max-width: $topmenu-trigger-width) {
+        display: none;
+    }
+}
+div.menus {
+    margin: 1em 1em 1em 1.5em;
+    @media (max-width: $topmenu-trigger-width) {
+        position: absolute;
+        top: 115px;
+        left: 155px;
+        z-index: 2;
+        background: #bedoff;
+        padding: 15px;
+    }
+}
+@media (max-width: $topmenu-trigger-width) {
+    div.menus.mobile-invisible>* { visibility: hidden; }
+}
+.hamburger {
+    display: none;
+    @media (max-width: $topmenu-trigger-width) {
+        margin: 5px 10px 25px 10px;
+        display: inline-block;
+        text-align: center;
+    }
+}
+div.bar {
+    width: 150px;
+    height: 20px;
+    background-color: #444488;
+    margin: 10px 5px 5px 5px;
+    display: block;
+}
+
+ol.h2list { font-size: 140%; font-weight: bold; }
+
+a {color: #4444cc; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: underline; padding: 0px; }
+a.code { font-family: monospace, fixed; }
+a:visited {color: #7722cc; }
+a:hover {color: #880000; }
+
+.expand-arrow:before {
+    display: block;
+    content: "";
+    margin: -.25em 0 0 -.4em;
+
+    width: .5em;
+    height: .5em;
+    border-right: .15em solid #3f4657;
+    border-top: .15em solid #3f4657;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+
+.expand-arrow {
+    display: inline-block;
+    visibility: hidden;
+    position: relative;
+    width: 12px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.curmenu:before, .curmenu i:before {
+    margin-left: -.25em;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.l2menu {
+    display: none;
+}
+.l3menu {
+    display: none;
+}
+.l4menu {
+    display: none;
+}
+.curmenu, .curmenu a {
+    display: initial;
+}
+.curmenu.expand-arrow {
+    display: inline-block;
+}
+
+.has-children {
+    visibility: visible;
+}
+.mobile-invisible {
+    @media (max-width: $topmenu-trigger-width) {
+        visibility: hidden;
+    }
+}
+
+.l1menu a {color: #000000; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; font-weight: normal; font-size: 110%; line-height:170%; }
+// IE inherits from a:visited, Mozilla from .l1menu a
+.l1menu a:visited {color: #000000; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; font-weight: normal; }
+.l1menu a:hover {color: #880000; }
+
+// IE requires this, while Mozilla uses .l2menu a color
+.l2menu img {border-color: #000000; }
+.l3menu img {border-color: #000000; }
+.l4menu img {border-color: #000000; }
+
+.l2menu a {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 90%;
+    margin-left: 1em;
+}
+.l2menu a:visited {color: #000000; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; font-size: 90%; }
+.l2menu a:hover {color: #880000; }
+
+.l3menu a {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 80%;
+    margin-left: 2em;
+}
+.l3menu a:visited {color: #000000; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; font-size: 80%; }
+.l3menu a:hover {color: #880000; }
+
+.l4menu a {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 70%;
+    margin-left: 3em;
+}
+.l4menu a:visited {color: #000000; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; font-size: 70%; }
+.l4menu a:hover {color: #880000; }
+
+.adkblue a {color: #000080; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; }
+.adkblue a:visited {color: #000080; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; }
+.adkblue a:hover {color: #880000;
+   text-decoration: none; }
+
+.awhite a {color: #ffffff; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; }
+.awhite a:visited {color: #ffffff; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; }
+.awhite a:hover {color: #880000;
+   text-decoration: none; }
+
+.aname a {color: #000080; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; }
+.aname a:visited {color: #000080; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; }
+.aname a:hover {color: #000080; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; }
+
+a.anchor {color: #000080; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; }
+a.anchor a:visited {color: #000080; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; }
+a.anchor a:hover {color: #000080; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; }
+
+form {margin-bottom: 0px;}
+
+#search-input {
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+#nav-sync {
+    // We decided we don't want to show the double-array and to always sync the menu.
+    display: none;
+}
+
+div.highlight {
+  background-color: #eeeeee;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 2px;
+  border-style: solid;
+  border-color: #cccccc;
+  overflow: auto;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html class="full-height">
+<head>
+  <meta name="description" content="DynamoRIO Dynamic Instrumentation Tool Platform">
+  <meta name="keywords" content="DynamoRIO Dynamic Instrumentation Tool Platform">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 64x64"
+        type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+
+  <script type="text/javascript" src="/jquery.js"></script>
+  <script type="text/javascript" src="/dynsections.js"></script>
+  <link href="/navtree.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="/navtreedata.js"></script>
+  <script type="text/javascript" src="/navtree.js"></script>
+  <link href="/doxygen.css" rel="stylesheet" type="text/css" />
+
+  <title>{{ page.title }}</title>
+
+  <script type="text/javascript">
+  <!-- Begin
+  function toggle_class(el, cls) {
+    var rex_m = new RegExp('(?:^|\\s)' + cls + '(?!\\S)');
+    var rex_r = new RegExp('(?:^|\\s)' + cls + '(?!\\S)', 'g');
+    if (el.className.match(rex_m)) {
+       el.className = el.className.replace(rex_r, '');
+    } else {
+       el.className += " " + cls;
+    }
+  } 
+
+  function show_menu() {
+    var els = document.getElementsByClassName("mobile-toggle");
+    for (i = 0; i < els.length; i++) {
+      toggle_class(els[i], "mobile-invisible");
+    }
+    return false;
+  }
+
+  function expand_menu(el) {
+    toggle_class(el.parentNode, "curmenu");
+    var els = el.parentNode.children;
+    for (i = 0; i < els.length; i++) {
+      toggle_class(els[i], "curmenu");
+    }
+    return false;
+  }
+  // End -->
+  </script>
+
+</head>
+
+</head>
+<body class="full-height">
+  <!--------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------->
+  <header class="sidebar darkbg">
+
+
+    <div class="logo">
+      <a href="/">
+        <img class="logo" src="/images/DrMemory-logo.png" alt="Dr. Memory logo">
+      </a>
+    </div>
+    <div class="subtitle">Dynamic Instrumentation Tool Platform</div>
+
+    <div class="hamburger">
+      <a class="hamburger" onclick='return show_menu();' href="">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      </a>
+    </div>
+
+    <div id="nav-tree" class="menus medbg noxscroll mobile-invisible mobile-toggle">
+      <form id="search-form" class="medbg" action="/search" method="get">
+        <input type="text" name="query" id="search-input" class="medbg"
+               placeholder="Search">
+        <input type="submit" value="Search" style="display: none;">
+      </form>
+      <div id="nav-tree-contents" class="medbg noxscroll mobile-invisible mobile-toggle">
+      </div>
+      <div id="nav-sync" class="medbg sync noxscroll mobile-invisible mobile-toggle">
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+    $(document).ready(function(){initNavTree('{{page.url}}',''); });
+    /* @license-end */
+    </script>
+      
+    </div>
+  </header>
+
+  <section class="content" id="doc-content">
+    <div class="content">
+    <!-- ###################################################################### -->
+
+      {{ content }}
+
+    <!-- ###################################################################### -->
+    </div>
+  </section>
+  <!--------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------->
+
+
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-7559754-4");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
+
+</body>
+</html>

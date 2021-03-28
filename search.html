@@ -1,0 +1,64 @@
+---
+title: Search
+sitemap: false
+layout: default
+---
+
+<!--
+Based on code from CloudCannon:
+
+The MIT License (MIT)
+
+Copyright (c) 2016 CloudCannon
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+
+<p><span id="search-process">Loading</span> results <span id="search-query-container" style="display: none;">for "<strong id="search-query"></strong>"</span></p>
+<ul id="search-results"></ul>
+
+<script>
+  window.data = {
+    {% for page in site.pages %}
+      {% if page.title %}
+        // Placing "nosearch' in the front matter will exclude a page.
+        {% unless page.nosearch %}
+          {% if added %},{% endif %}
+          {% assign added = false %}
+          {% assign final_char = page.url | slice: -1, 1 %}
+          {% if final_char == '/' %}
+            {% assign my_url = page.url | append: "index.html" %}
+          {% else %}
+            {% assign my_url = page.url %}
+          {% endif %}
+          "{{ my_url | slugify }}": {
+            "name": "{{ my_url | slugify }}",
+            "title": "{{ page.title | xml_escape }}",
+            "url": "{{ page.url | xml_escape }}",
+            "content": {{ page.content | strip_html | replace_regex: "[\s/\n]+"," " | strip | jsonify }}
+          }
+          {% assign added = true %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  };
+</script>
+<script src="docs/keywords.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="/search.js"></script>

@@ -1,0 +1,41 @@
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: DynamoRIO
+description: >-
+  Dynamic instrumentation tool platform
+baseurl: ""
+url: "https://dynamorio.org"
+
+# I was hoping we could move the .md files into a _docs/ subdir and keep
+# the top-level repo dir less cluttered by setting a "root:" param or
+# "include: [_docs]" or something but I could not get it to work, and
+# even then we might need a "permalink: /foo.html" in every single
+# page.  It does not seem worth it.
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+
+include: ['docs']
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - CNAME
