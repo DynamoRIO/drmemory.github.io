@@ -27,6 +27,16 @@ permalink: /navtreedata.js
 */
 var NAVTREE =
 [
+    [ "Home", "index.html", [
+      [ "Downloading Dr. Memory", "index.html#autotoc_md0", null ],
+      [ "Dr. Memory Performance", "index.html#autotoc_md1", null ],
+      [ "Documentation", "index.html#autotoc_md2", null ],
+      [ "System Call Tracer for Windows", "index.html#autotoc_md3", null ],
+      [ "Fuzz Testing Infrastructure", "index.html#autotoc_md4", null ],
+      [ "Discussion List", "index.html#autotoc_md5", null ],
+      [ "Issue Tracker", "index.html#autotoc_md6", null ],
+      [ "Contributing to Dr. Memory", "index.html#autotoc_md7", null ]
+    ] ],
     [ "Installing Dr. Memory", "page_install.html", {% include_relative page_install.js %} ],
     [ "Preparing Your Application", "page_prep.html", [
       [ "For All Platforms", "page_prep.html#sec_prep_general", [
@@ -58,6 +68,7 @@ var NAVTREE =
     [ "Error Types Reported by Dr. Memory", "page_types.html", {% include_relative page_types.js %} ],
     [ "Error Reports", "page_reports.html", {% include_relative page_reports.js %} ],
     [ "Light Mode", "page_light.html", null ],
+    [ "快速入门", "page_chinese.html", null ],
     [ "Fuzz Testing Mode", "page_fuzzer.html", [
       [ "Fuzzer Target", "page_fuzzer.html#sec_fuzzer_target", null ],
       [ "C++ Targets", "page_fuzzer.html#sec_cpp_targets", null ],
@@ -70,18 +81,18 @@ var NAVTREE =
       [ "Enabling Coverage Information", "page_coverage.html#sec_enable", null ],
       [ "Post Processing", "page_coverage.html#sec_postproc", null ]
     ] ],
+    [ "Additional Tools", "page_tools.html", {% include_relative page_tools.js %} ],
+    [ "Obtaining Help and Reporting Bugs", "page_help.html", null ],
     [ "Dr. Memory Runtime Option Reference", "page_options.html", null ],
-    [ "Release Notes for Version 2.3.18714", "page_release_notes.html", [
+    [ "Release Notes for Version 2.3.18715", "page_release_notes.html", [
       [ "Distribution Contents", "page_release_notes.html#sec_package", null ],
       [ "Changes Since Prior Releases", "page_release_notes.html#sec_changes", null ],
       [ "Limitations", "page_release_notes.html#sec_limits", [
         [ "Interoperability", "page_release_notes.html#sec_interop", null ]
       ] ]
     ] ],
-    [ "Obtaining Help and Reporting Bugs", "page_help.html", null ],
-    [ "License for Dr. Memory", "page_license.html", null ],
-    [ "Additional Tools", "page_tools.html", {% include_relative page_tools.js %} ],
     [ "Dr. Memory Framework", "page_drmf.html", {% include_relative page_drmf.js %} ],
+    [ "License for Dr. Memory", "page_license.html", null ],
 [ "API Reference", "files.html", [
     [ "Deprecated List", "deprecated.html", null ],
     [ "DRMF Modules", "modules.html", {% include_relative modules.js %} ],
