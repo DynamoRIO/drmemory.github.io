@@ -10,7 +10,7 @@ gem "github-pages", "~> 207", group: :jekyll_plugins
 gem "minima", "~> 2.0"
 
 # Ensure the version of kramdown used by github-pages has security fixes:
-gem "kramdown", ">= 2.3.0"
+gem "kramdown", ">= 2.3.1"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
