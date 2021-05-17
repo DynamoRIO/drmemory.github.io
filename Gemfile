@@ -4,7 +4,7 @@ source "https://rubygems.org"
 # https://pages.github.com/versions/
 
 # To upgrade, run `bundle update github-pages`.
-gem "github-pages", "~> 207", group: :jekyll_plugins
+gem "github-pages", "~> 214", group: :jekyll_plugins
 
 # Default theme.
 gem "minima", "~> 2.0"
@@ -12,9 +12,12 @@ gem "minima", "~> 2.0"
 # Ensure the version of kramdown used by github-pages has security fixes:
 gem "kramdown", ">= 2.3.1"
 
+# Fix security vuln:
+gem "rexml", ">= 3.2.5"
+
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
-  gem "jekyll-redirect-from", "~> 0.15.0"
+  gem "jekyll-redirect-from", "~> 0.16.0"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
