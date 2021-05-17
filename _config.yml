@@ -10,7 +10,7 @@ title: DynamoRIO
 description: >-
   Dynamic instrumentation tool platform
 baseurl: ""
-url: "https://dynamorio.org"
+url: "https://drmemory.org"
 
 # I was hoping we could move the .md files into a _docs/ subdir and keep
 # the top-level repo dir less cluttered by setting a "root:" param or
