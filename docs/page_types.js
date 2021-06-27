@@ -1,4 +1,3 @@
-var page_types =
 [
     [ "Unaddressable Access", "page_unaddr.html", null ],
     [ "Uninitialized Read", "page_uninit.html", null ],
@@ -7,4 +6,4 @@ var page_types =
     [ "GDI Usage Errors", "page_gdi.html", null ],
     [ "Handle Leaks", "page_handle.html", null ],
     [ "Warning", "page_warning.html", null ]
-];
+],

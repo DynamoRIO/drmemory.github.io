@@ -1,4 +1,3 @@
-var struct__drsys__options__t =
 [
     [ "analyze_unknown_syscalls", "struct__drsys__options__t.html#a98bced7cd4296b8074f922cc529e9e3a", null ],
     [ "is_byte_addressable", "struct__drsys__options__t.html#af6e76fc688fc85e8a95858f2e9266e91", null ],
@@ -13,4 +12,4 @@ var struct__drsys__options__t =
     [ "syscall_sentinels", "struct__drsys__options__t.html#a0903b4a6615e8f83fbe60a2211750675", null ],
     [ "sysnum_file", "struct__drsys__options__t.html#ab983f4031f8c4e4d67c3b6b6b70b09c6", null ],
     [ "verify_sysnums", "struct__drsys__options__t.html#a918698345d3cd7e63847afceb00401d3", null ]
-];
+],

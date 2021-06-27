@@ -1,4 +1,3 @@
-var struct__umbra__map__options__t =
 [
     [ "app_memory_create_cb", "struct__umbra__map__options__t.html#a9886fb5b988987a4918a61464bb85b2a", null ],
     [ "app_memory_mremap_cb", "struct__umbra__map__options__t.html#ae61776cf0d015757e3c84a68fd33d3e1", null ],
@@ -9,4 +8,4 @@ var struct__umbra__map__options__t =
     [ "flags", "struct__umbra__map__options__t.html#aaafc8da2e9f63676968b6d869b6ca8bb", null ],
     [ "scale", "struct__umbra__map__options__t.html#a57948f438b0fc0495efee78389d132b1", null ],
     [ "struct_size", "struct__umbra__map__options__t.html#a023efc50dbc6de67efc3b39547f4cebb", null ]
-];
+],

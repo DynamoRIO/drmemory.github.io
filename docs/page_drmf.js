@@ -1,4 +1,3 @@
-var page_drmf =
 [
     [ "Using DRMF", "page_drmf.html#sec_drmf_setup", null ],
     [ "Dr. Syscall: System Call Monitoring Extension", "page_drsyscall.html", [
@@ -28,4 +27,4 @@ var page_drmf =
         [ "Mutator Sparsity", "page_drfuzz.html#sec_mutator_sparsity", null ]
       ] ]
     ] ]
-];
+],

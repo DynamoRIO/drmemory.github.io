@@ -1,4 +1,3 @@
-var drmemory__framework_8h =
 [
     [ "drmf_status_t", "drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b", [
       [ "DRMF_SUCCESS", "drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619ba20b13fe9b721319c2ff161920c0e5a8d", null ],
@@ -19,4 +18,4 @@ var drmemory__framework_8h =
       [ "DRMF_ERROR_INVALID_ADDRESS", "drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619baad1cf9e37ef14744b3f51a29df0c7d12", null ],
       [ "DRMF_WARNING_UNSUPPORTED_KERNEL", "drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619ba9e881c9692ae6ec857cb05b1cf4f1cc1", null ]
     ] ]
-];
+],

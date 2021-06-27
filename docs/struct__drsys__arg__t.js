@@ -1,4 +1,3 @@
-var struct__drsys__arg__t =
 [
     [ "arg_name", "struct__drsys__arg__t.html#a91e5e2739f229d89cb9b9463f6d24000", null ],
     [ "containing_type", "struct__drsys__arg__t.html#aadd7be992ddd4ce19df321792501ae3a", null ],
@@ -18,4 +17,4 @@ var struct__drsys__arg__t =
     [ "valid", "struct__drsys__arg__t.html#a733489957e1151fa3616ce3c7342177b", null ],
     [ "value", "struct__drsys__arg__t.html#a31f22cd86d55c9e999aa700633553f35", null ],
     [ "value64", "struct__drsys__arg__t.html#a3e6ca2fd9ff8f263f91c973eb215c84f", null ]
-];
+],

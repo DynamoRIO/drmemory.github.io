@@ -1,8 +1,7 @@
-var drsyscall_8h =
 [
-    [ "_drsys_sysnum_t", "struct__drsys__sysnum__t.html", "struct__drsys__sysnum__t" ],
-    [ "_drsys_arg_t", "struct__drsys__arg__t.html", "struct__drsys__arg__t" ],
-    [ "_drsys_options_t", "struct__drsys__options__t.html", "struct__drsys__options__t" ],
+    [ "_drsys_sysnum_t", "struct__drsys__sysnum__t.html", {% include_relative struct__drsys__sysnum__t.js %} ],
+    [ "_drsys_arg_t", "struct__drsys__arg__t.html", {% include_relative struct__drsys__arg__t.js %} ],
+    [ "_drsys_options_t", "struct__drsys__options__t.html", {% include_relative struct__drsys__options__t.js %} ],
     [ "DRMGR_PRIORITY_NAME_DRSYS", "drsyscall_8h.html#a06501680e75c5c66951a383727489f6d", null ],
     [ "DRMGR_PRIORITY_NAME_DRSYS_LAST", "drsyscall_8h.html#a233cc02c8aac42b860c6463406881b92", null ],
     [ "DRSYS_SYSNUM_FILE_FOOTER", "drsyscall_8h.html#a88f4938cc8eafa1993deb4acf817fa02", null ],
@@ -109,4 +108,4 @@ var drsyscall_8h =
     [ "drsys_syscall_succeeded", "drsyscall_8h.html#a5000bd0f08a57454eaf311f43f1fcd9f", null ],
     [ "drsys_syscall_type", "drsyscall_8h.html#aad6c821fceb138daff4e5788885d4a7d", null ],
     [ "drsys_sysnums_equal", "drsyscall_8h.html#a901925cd68acc174e2fab7fe646c348d", null ]
-];
+],

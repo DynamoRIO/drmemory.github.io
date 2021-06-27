@@ -1,3 +1,6 @@
+---
+permalink: /navtreedata.js
+---
 /*
 @licstart  The following is the entire license notice for the
 JavaScript code in this file.
@@ -22,7 +25,6 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "Dr. Memory", "index.html", [
     [ "Home", "index.html", [
       [ "Downloading Dr. Memory", "index.html#autotoc_md0", null ],
       [ "Dr. Memory Performance", "index.html#autotoc_md1", null ],
@@ -33,7 +35,7 @@ var NAVTREE =
       [ "Issue Tracker", "index.html#autotoc_md6", null ],
       [ "Contributing to Dr. Memory", "index.html#autotoc_md7", null ]
     ] ],
-    [ "Installing Dr. Memory", "page_install.html", "page_install" ],
+    [ "Installing Dr. Memory", "page_install.html", {% include_relative page_install.js %} ],
     [ "Preparing Your Application", "page_prep.html", [
       [ "For All Platforms", "page_prep.html#sec_prep_general", [
         [ "Debug Information", "page_prep.html#sec_prep_debuginfo", null ],
@@ -61,10 +63,10 @@ var NAVTREE =
       [ "Applications That Do Not Exit", "page_running.html#sec_daemon", null ],
       [ "Tuning for Performance", "page_running.html#sec_perf", null ]
     ] ],
-    [ "Error Types Reported by Dr. Memory", "page_types.html", "page_types" ],
-    [ "Error Reports", "page_reports.html", "page_reports" ],
+    [ "Error Types Reported by Dr. Memory", "page_types.html", {% include_relative page_types.js %} ],
+    [ "Error Reports", "page_reports.html", {% include_relative page_reports.js %} ],
     [ "Light Mode", "page_light.html", null ],
-    [ "Chinese Quickstart Instructions", "page_chinese.html", null ],
+    [ "快速入门", "page_chinese.html", null ],
     [ "Fuzz Testing Mode", "page_fuzzer.html", [
       [ "Fuzzer Target", "page_fuzzer.html#sec_fuzzer_target", null ],
       [ "C++ Targets", "page_fuzzer.html#sec_cpp_targets", null ],
@@ -77,7 +79,7 @@ var NAVTREE =
       [ "Enabling Coverage Information", "page_coverage.html#sec_enable", null ],
       [ "Post Processing", "page_coverage.html#sec_postproc", null ]
     ] ],
-    [ "Additional Tools", "page_tools.html", "page_tools" ],
+    [ "Additional Tools", "page_tools.html", {% include_relative page_tools.js %} ],
     [ "Obtaining Help and Reporting Bugs", "page_help.html", null ],
     [ "Dr. Memory Runtime Option Reference", "page_options.html", null ],
     [ "Release Notes for Version 2.3.18805", "page_release_notes.html", [
@@ -87,37 +89,32 @@ var NAVTREE =
         [ "Interoperability", "page_release_notes.html#sec_interop", null ]
       ] ]
     ] ],
-    [ "Dr. Memory Framework", "page_drmf.html", "page_drmf" ],
+    [ "Dr. Memory Framework", "page_drmf.html", {% include_relative page_drmf.js %} ],
     [ "License for Dr. Memory", "page_license.html", null ],
+[ "API Reference", "files.html", [
     [ "Deprecated List", "deprecated.html", null ],
-    [ "DRMF Modules", "modules.html", "modules" ],
+    [ "DRMF Modules", "modules.html", {% include_relative modules.js %} ],
     [ "Data Structures", "annotated.html", [
-      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structures", "annotated.html", {% include_relative annotated_dup.js %} ],
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
+      [ "File List", "files.html", {% include_relative files_dup.js %} ],
       [ "Globals", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
+        [ "All", "globals.html", {% include_relative globals_dup.js %} ],
         [ "Functions", "globals_func.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
-    ] ],
-    [ "Dr. Memory Home Page", "^http://www.drmemory.org", null ]
-  ] ]
+    ] ],  ] ]
 ];
 
-var NAVTREEINDEX =
-[
-"annotated.html",
-"page_install_linux.html#sec_linux_install"
-];
+
 
 var SYNCONMSG = 'click to disable panel synchronisation';
 var SYNCOFFMSG = 'click to enable panel synchronisation';

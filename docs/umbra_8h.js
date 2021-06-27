@@ -1,7 +1,6 @@
-var umbra_8h =
 [
-    [ "_umbra_shadow_memory_info_t", "struct__umbra__shadow__memory__info__t.html", "struct__umbra__shadow__memory__info__t" ],
-    [ "_umbra_map_options_t", "struct__umbra__map__options__t.html", "struct__umbra__map__options__t" ],
+    [ "_umbra_shadow_memory_info_t", "struct__umbra__shadow__memory__info__t.html", {% include_relative struct__umbra__shadow__memory__info__t.js %} ],
+    [ "_umbra_map_options_t", "struct__umbra__map__options__t.html", {% include_relative struct__umbra__map__options__t.js %} ],
     [ "DRMGR_PRIORITY_NAME_EXCPT_UMBRA", "umbra_8h.html#a85ff5a010e1e89f8ee8b109157b02281", null ],
     [ "UMBRA_MAP_SCALE_IS_UP", "umbra_8h.html#a10c3519da6f5b73606c318d4a6322372", null ],
     [ "app_memory_create_cb_t", "umbra_8h.html#a2d2b65225bc91de41cc4e715723fb1bc", null ],
@@ -54,4 +53,4 @@ var umbra_8h =
     [ "umbra_shadow_set_range", "umbra_8h.html#aafb51fb89b014b9bbf0dbe44c2d47b2a", null ],
     [ "umbra_value_in_shadow_memory", "umbra_8h.html#a7a58ed96cd19b0aaa6415670aad9acc1", null ],
     [ "umbra_write_shadow_memory", "umbra_8h.html#af368cd2ef69d498900fecbeae39781f4", null ]
-];
+],

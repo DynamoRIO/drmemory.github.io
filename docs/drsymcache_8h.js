@@ -1,4 +1,3 @@
-var drsymcache_8h =
 [
     [ "DRMGR_PRIORITY_NAME_DRSYMCACHE", "drsymcache_8h.html#adc95919cd07bac508f721b4bc93e454a", null ],
     [ "DRMGR_PRIORITY_NAME_DRSYMCACHE_SAVE", "drsymcache_8h.html#add1ab24936340d4f84a0fac0e0534cc6", null ],
@@ -14,4 +13,4 @@ var drsymcache_8h =
     [ "drsymcache_module_has_debug_info", "drsymcache_8h.html#ad528ee5a5889cd39d0ec0db323d7c3b3", null ],
     [ "drsymcache_module_is_cached", "drsymcache_8h.html#a11057a892bbfba83e5f7111f64d97085", null ],
     [ "drsymcache_module_save_symcache", "drsymcache_8h.html#a52c95b9bd8e0668534e39b55ff921d39", null ]
-];
+],
