@@ -1,3 +1,4 @@
+var page_tools =
 [
     [ "System Call Tracer for Windows", "page_drstrace.html", [
       [ "Child Processes", "page_drstrace.html#sec_drstrace_child", null ],
@@ -8,4 +9,4 @@
       ] ]
     ] ],
     [ "Symbol Query Tool", "page_symquery.html", null ]
-],
+];

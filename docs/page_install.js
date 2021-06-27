@@ -1,3 +1,4 @@
+var page_install =
 [
     [ "Installing on Linux", "page_install_linux.html", [
       [ "Installing", "page_install_linux.html#sec_linux_install", null ]
@@ -11,4 +12,4 @@
       [ "Local Install", "page_install_windows.html#sec_windows_local", null ]
     ] ],
     [ "Installing on Android", "page_install_android.html", null ]
-],
+];

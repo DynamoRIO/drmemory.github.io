@@ -1,32 +1,28 @@
----
-permalink: /navtreedata.js
----
 /*
- @licstart  The following is the entire license notice for the JavaScript code in this file.
+@licstart  The following is the entire license notice for the
+JavaScript code in this file.
 
- The MIT License (MIT)
+Copyright (C) 1997-2019 by Dimitri van Heesch
 
- Copyright (C) 1997-2020 by Dimitri van Heesch
+This program is free software; you can redistribute it and/or modify
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
 
- Permission is hereby granted, free of charge, to any person obtaining a copy of this software
- and associated documentation files (the "Software"), to deal in the Software without restriction,
- including without limitation the rights to use, copy, modify, merge, publish, distribute,
- sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 
- The above copyright notice and this permission notice shall be included in all copies or
- substantial portions of the Software.
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
- BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
- @licend  The above is the entire license notice for the JavaScript code in this file
+@licend  The above is the entire license notice
+for the JavaScript code in this file
 */
 var NAVTREE =
 [
+  [ "Dr. Memory", "index.html", [
     [ "Home", "index.html", [
       [ "Downloading Dr. Memory", "index.html#autotoc_md0", null ],
       [ "Dr. Memory Performance", "index.html#autotoc_md1", null ],
@@ -37,7 +33,7 @@ var NAVTREE =
       [ "Issue Tracker", "index.html#autotoc_md6", null ],
       [ "Contributing to Dr. Memory", "index.html#autotoc_md7", null ]
     ] ],
-    [ "Installing Dr. Memory", "page_install.html", {% include_relative page_install.js %} ],
+    [ "Installing Dr. Memory", "page_install.html", "page_install" ],
     [ "Preparing Your Application", "page_prep.html", [
       [ "For All Platforms", "page_prep.html#sec_prep_general", [
         [ "Debug Information", "page_prep.html#sec_prep_debuginfo", null ],
@@ -65,10 +61,10 @@ var NAVTREE =
       [ "Applications That Do Not Exit", "page_running.html#sec_daemon", null ],
       [ "Tuning for Performance", "page_running.html#sec_perf", null ]
     ] ],
-    [ "Error Types Reported by Dr. Memory", "page_types.html", {% include_relative page_types.js %} ],
-    [ "Error Reports", "page_reports.html", {% include_relative page_reports.js %} ],
+    [ "Error Types Reported by Dr. Memory", "page_types.html", "page_types" ],
+    [ "Error Reports", "page_reports.html", "page_reports" ],
     [ "Light Mode", "page_light.html", null ],
-    [ "快速入门", "page_chinese.html", null ],
+    [ "Chinese Quickstart Instructions", "page_chinese.html", null ],
     [ "Fuzz Testing Mode", "page_fuzzer.html", [
       [ "Fuzzer Target", "page_fuzzer.html#sec_fuzzer_target", null ],
       [ "C++ Targets", "page_fuzzer.html#sec_cpp_targets", null ],
@@ -81,42 +77,47 @@ var NAVTREE =
       [ "Enabling Coverage Information", "page_coverage.html#sec_enable", null ],
       [ "Post Processing", "page_coverage.html#sec_postproc", null ]
     ] ],
-    [ "Additional Tools", "page_tools.html", {% include_relative page_tools.js %} ],
+    [ "Additional Tools", "page_tools.html", "page_tools" ],
     [ "Obtaining Help and Reporting Bugs", "page_help.html", null ],
     [ "Dr. Memory Runtime Option Reference", "page_options.html", null ],
-    [ "Release Notes for Version 2.3.18715", "page_release_notes.html", [
+    [ "Release Notes for Version 2.3.18805", "page_release_notes.html", [
       [ "Distribution Contents", "page_release_notes.html#sec_package", null ],
       [ "Changes Since Prior Releases", "page_release_notes.html#sec_changes", null ],
       [ "Limitations", "page_release_notes.html#sec_limits", [
         [ "Interoperability", "page_release_notes.html#sec_interop", null ]
       ] ]
     ] ],
-    [ "Dr. Memory Framework", "page_drmf.html", {% include_relative page_drmf.js %} ],
+    [ "Dr. Memory Framework", "page_drmf.html", "page_drmf" ],
     [ "License for Dr. Memory", "page_license.html", null ],
-[ "API Reference", "files.html", [
     [ "Deprecated List", "deprecated.html", null ],
-    [ "DRMF Modules", "modules.html", {% include_relative modules.js %} ],
+    [ "DRMF Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
-      [ "Data Structures", "annotated.html", {% include_relative annotated_dup.js %} ],
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", {% include_relative files_dup.js %} ],
+      [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
-        [ "All", "globals.html", {% include_relative globals_dup.js %} ],
+        [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
-    ] ],  ] ]
+    ] ],
+    [ "Dr. Memory Home Page", "^http://www.drmemory.org", null ]
+  ] ]
 ];
 
-
+var NAVTREEINDEX =
+[
+"annotated.html",
+"page_install_linux.html#sec_linux_install"
+];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
 var SYNCOFFMSG = 'click to enable panel synchronisation';

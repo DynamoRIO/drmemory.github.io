@@ -1,6 +1,7 @@
+var umbra_8h =
 [
-    [ "_umbra_shadow_memory_info_t", "struct__umbra__shadow__memory__info__t.html", {% include_relative struct__umbra__shadow__memory__info__t.js %} ],
-    [ "_umbra_map_options_t", "struct__umbra__map__options__t.html", {% include_relative struct__umbra__map__options__t.js %} ],
+    [ "_umbra_shadow_memory_info_t", "struct__umbra__shadow__memory__info__t.html", "struct__umbra__shadow__memory__info__t" ],
+    [ "_umbra_map_options_t", "struct__umbra__map__options__t.html", "struct__umbra__map__options__t" ],
     [ "DRMGR_PRIORITY_NAME_EXCPT_UMBRA", "umbra_8h.html#a85ff5a010e1e89f8ee8b109157b02281", null ],
     [ "UMBRA_MAP_SCALE_IS_UP", "umbra_8h.html#a10c3519da6f5b73606c318d4a6322372", null ],
     [ "app_memory_create_cb_t", "umbra_8h.html#a2d2b65225bc91de41cc4e715723fb1bc", null ],
@@ -8,6 +9,7 @@
     [ "umbra_map_options_t", "umbra_8h.html#a02f06c9a73ed394fd9ac892b5b9ecfb0", null ],
     [ "umbra_map_t", "umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196", null ],
     [ "umbra_shadow_memory_info_t", "umbra_8h.html#a3ed35b3fd203df8da97d324b87c3ec14", null ],
+    [ "DRMGR_PRIORITY_EXCPT_UMBRA", "umbra_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a28b395ded58393f41fcab8be32479122", null ],
     [ "umbra_map_flags_t", "umbra_8h.html#aaa9d16970f73407af0af6b173afd62b6", [
       [ "UMBRA_MAP_CREATE_SHADOW_ON_TOUCH", "umbra_8h.html#aaa9d16970f73407af0af6b173afd62b6a16bca8c68c5e970c4457b64606a9671b", null ],
       [ "UMBRA_MAP_SHADOW_SHARED_READONLY", "umbra_8h.html#aaa9d16970f73407af0af6b173afd62b6ae42e8acda254c7bf3a3b196d070a284d", null ]
@@ -52,4 +54,4 @@
     [ "umbra_shadow_set_range", "umbra_8h.html#aafb51fb89b014b9bbf0dbe44c2d47b2a", null ],
     [ "umbra_value_in_shadow_memory", "umbra_8h.html#a7a58ed96cd19b0aaa6415670aad9acc1", null ],
     [ "umbra_write_shadow_memory", "umbra_8h.html#af368cd2ef69d498900fecbeae39781f4", null ]
-],
+];

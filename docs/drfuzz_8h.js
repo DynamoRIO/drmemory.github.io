@@ -1,8 +1,9 @@
+var drfuzz_8h =
 [
     [ "_drfuzz_target_frame_t", "struct__drfuzz__target__frame__t.html", null ],
-    [ "_drfuzz_fault_t", "struct__drfuzz__fault__t.html", {% include_relative struct__drfuzz__fault__t.js %} ],
-    [ "_drfuzz_fault_thread_state_t", "struct__drfuzz__fault__thread__state__t.html", {% include_relative struct__drfuzz__fault__thread__state__t.js %} ],
-    [ "_drfuzz_crash_state_t", "struct__drfuzz__crash__state__t.html", {% include_relative struct__drfuzz__crash__state__t.js %} ],
+    [ "_drfuzz_fault_t", "struct__drfuzz__fault__t.html", "struct__drfuzz__fault__t" ],
+    [ "_drfuzz_fault_thread_state_t", "struct__drfuzz__fault__thread__state__t.html", "struct__drfuzz__fault__thread__state__t" ],
+    [ "_drfuzz_crash_state_t", "struct__drfuzz__crash__state__t.html", "struct__drfuzz__crash__state__t" ],
     [ "drfuzz_crash_state_t", "drfuzz_8h.html#a4c1d7293352395de101839ce66479103", null ],
     [ "drfuzz_fault_ex_t", "drfuzz_8h.html#a0f95b432c34811d65b6b2a805d4e20e6", null ],
     [ "drfuzz_fault_t", "drfuzz_8h.html#ad5cd33ac856a0ea1e5607d7db6d0c5aa", null ],
@@ -33,4 +34,4 @@
     [ "drfuzz_unregister_crash_thread_event", "drfuzz_8h.html#a1534ae1ed9cfe422b86a563319c11bc5", null ],
     [ "drfuzz_unregister_fault_delete_callback", "drfuzz_8h.html#af80f94792b7501c32f36ffdce3874928", null ],
     [ "drfuzz_unregister_fault_event", "drfuzz_8h.html#ae4959e5c22c6a55e875fd406bf9e2613", null ]
-],
+];
