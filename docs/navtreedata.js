@@ -35,6 +35,11 @@ var NAVTREE =
       [ "Issue Tracker", "index.html#autotoc_md6", null ],
       [ "Contributing to Dr. Memory", "index.html#autotoc_md7", null ]
     ] ],
+    [ "Download", "page_download.html", [
+      [ "Latest Build", "page_download.html#sec_latest_build", null ],
+      [ "Official Releases", "page_download.html#autotoc_md8", null ],
+      [ "Tutorials and talks", "page_download.html#autotoc_md9", null ]
+    ] ],
     [ "Installing Dr. Memory", "page_install.html", {% include_relative page_install.js %} ],
     [ "Preparing Your Application", "page_prep.html", [
       [ "For All Platforms", "page_prep.html#sec_prep_general", [
@@ -80,9 +85,21 @@ var NAVTREE =
       [ "Post Processing", "page_coverage.html#sec_postproc", null ]
     ] ],
     [ "Additional Tools", "page_tools.html", {% include_relative page_tools.js %} ],
-    [ "Obtaining Help and Reporting Bugs", "page_help.html", null ],
+    [ "Obtaining Help and Reporting Bugs", "page_help.html", [
+      [ "Discussion Email List", "page_help.html#autotoc_md10", null ],
+      [ "Issue Tracker", "page_help.html#autotoc_md11", null ],
+      [ "Debugging Dr. Memory", "page_help.html#sec_debugging", [
+        [ "General Tips", "page_help.html#autotoc_md12", null ],
+        [ "Narrowing Down the Source of the Problem", "page_help.html#sec_narrow", null ],
+        [ "Gathering Additional Data", "page_help.html#autotoc_md13", null ],
+        [ "Windows", "page_help.html#autotoc_md14", null ],
+        [ "Private Symbols", "page_help.html#autotoc_md15", null ],
+        [ "DMP files", "page_help.html#autotoc_md16", null ],
+        [ "Application Callstack", "page_help.html#autotoc_md17", null ]
+      ] ]
+    ] ],
     [ "Dr. Memory Runtime Option Reference", "page_options.html", null ],
-    [ "Release Notes for Version 2.3.18805", "page_release_notes.html", [
+    [ "Release Notes for Version 2.3.18806", "page_release_notes.html", [
       [ "Distribution Contents", "page_release_notes.html#sec_package", null ],
       [ "Changes Since Prior Releases", "page_release_notes.html#sec_changes", null ],
       [ "Limitations", "page_release_notes.html#sec_limits", [
@@ -91,6 +108,7 @@ var NAVTREE =
     ] ],
     [ "Dr. Memory Framework", "page_drmf.html", {% include_relative page_drmf.js %} ],
     [ "License for Dr. Memory", "page_license.html", null ],
+    [ "Developer Documentation", "page_developers.html", {% include_relative page_developers.js %} ],
 [ "API Reference", "files.html", [
     [ "Deprecated List", "deprecated.html", null ],
     [ "DRMF Modules", "modules.html", {% include_relative modules.js %} ],
