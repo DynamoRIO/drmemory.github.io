@@ -24,11 +24,11 @@ permalink: /page_arm_port.html
 <div class="title">ARM Port </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md91"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md88"></a>
 ARM Port Design Document</h1>
-<h2><a class="anchor" id="autotoc_md92"></a>
+<h2><a class="anchor" id="autotoc_md89"></a>
 Pattern Mode</h2>
-<h3><a class="anchor" id="autotoc_md93"></a>
+<h3><a class="anchor" id="autotoc_md90"></a>
 Instrumentation to compare a memory value to an immediate</h3>
 <p>We can't easily use our x86 instrumentation: </p><pre class="fragment">cmp &lt;memval&gt;, 0xf1fdf1fd
 </pre><p>We may have to do sthg like: </p><pre class="fragment">spill r0
@@ -39,7 +39,7 @@ movt 0xf1fd, r1
 cmp r0, r1
 restore r0
 restore r1
-</pre><h4><a class="anchor" id="autotoc_md94"></a>
+</pre><h4><a class="anchor" id="autotoc_md91"></a>
 Thumb mode: can repeat single byte</h4>
 <p>The expanded-immeds do allow: </p><pre class="fragment">cmp r0, 0xf100f100
 </pre><p>Or </p><pre class="fragment">cmp r0, 0x00fd00fd
@@ -66,16 +66,16 @@ Thumb mode: can repeat single byte</h4>
 +40   m4 @0x550b1bd8  f8da 0080  ldr    +0x00000080(%r10)[4byte] -&gt; %r0
 +44   m4 @0x550b252c  f380 8c00  msr    $0x0c %r0 -&gt; %cpsr
 +48   m4 @0x550b26a8  f8da 0084  ldr    +0x00000084(%r10)[4byte] -&gt; %r0
-</pre><h4><a class="anchor" id="autotoc_md95"></a>
+</pre><h4><a class="anchor" id="autotoc_md92"></a>
 To avoid spilling flags, try sub+cbnz in thumb mode</h4>
 <p>Our scratch reg must be r0-r7 for cbnz though.</p>
 <p>And we'd have to add an IT block for sub (but cbnz cannot be inside it).</p>
 <p>So maybe we should only do it when the flags are live? Thus adding more complexity to the fault identification code.</p>
-<h4><a class="anchor" id="autotoc_md96"></a>
+<h4><a class="anchor" id="autotoc_md93"></a>
 ARM mode: cannot repeat an immmed byte!  Use OP_sub x4?</h4>
 <p>But what about ARM? ARM immediates in GPR instrs are just an 8-bit value rotated: no repeating. Even the SIMD and VFP immeds aren't much help, except maybe the cmode=1111 combined with cmode=1100? Subtract one and then the other?</p>
 <p>We could use mvn if most bits are 1's: sthg like 0xfff1ffff, but we still need to spill a reg, and if we do that we may as well use movw,movt.</p>
-<h4><a class="anchor" id="autotoc_md97"></a>
+<h4><a class="anchor" id="autotoc_md94"></a>
 Do 4 subtracts?</h4>
 <p>Faster than a spill, though not if we have a (2nd) dead reg.</p>
 <p>So we'd do: </p><pre class="fragment"> sub r0, 0xf1000000
@@ -116,21 +116,21 @@ gcc arm -O3:
 +52   m4 @0x4f8c6290  e59a1080   ldr    +0x00000080(%r10)[4byte] -&gt; %r1
 +56   m4 @0x4f8c62dc  e12cf001   msr    $0x0c %r1 -&gt; %cpsr
 +60   m4 @0x4f8c6334  e59a1084   ldr    +0x00000084(%r10)[4byte] -&gt; %r1
-</pre><h4><a class="anchor" id="autotoc_md98"></a>
+</pre><h4><a class="anchor" id="autotoc_md95"></a>
 Switch to thumb mode just for the cmp?</h4>
 <p>Breaks DR's rules: would mess up decode_fragment.</p>
 <p>Instead of inlining, could jump to separate gencode (need 15 forms one for each scratch reg) &ndash; if already in cache maybe ok that it's not local.</p>
-<h4><a class="anchor" id="autotoc_md99"></a>
+<h4><a class="anchor" id="autotoc_md96"></a>
 Load immed from TLS slot</h4>
 <p>If TLS in data cache and have L1 hit, may be as fast as movw,movt, and it's shorter code.</p>
-<h4><a class="anchor" id="autotoc_md100"></a>
+<h4><a class="anchor" id="autotoc_md97"></a>
 Go w/ unified ARM+Thumb same approach for simpler code?</h4>
-<h4><a class="anchor" id="autotoc_md101"></a>
+<h4><a class="anchor" id="autotoc_md98"></a>
 Permanently steal another reg?</h4>
 <p>Very complex w/ interactions w/ r10 though</p>
-<h4><a class="anchor" id="autotoc_md102"></a>
+<h4><a class="anchor" id="autotoc_md99"></a>
 Put the optimizations under an option and under option switch to single-byte pattern val</h4>
-<h4><a class="anchor" id="autotoc_md103"></a>
+<h4><a class="anchor" id="autotoc_md100"></a>
 For 2 spills, have drreg use ldm or ldrd?</h4>
 <p>For 2 spills, is ldm or ldrd faster? Qin's initial tests showed no faster than separate ldr x2, so even though instr density is better, if it makes drreg really complex it's prob not worth doing. </p>
 </div></div><!-- contents -->
@@ -140,5 +140,5 @@ For 2 spills, have drreg use ldm or ldrd?</h4>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.18900 --- Fri Oct 15 2021 03:01:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.5.0 --- Mon Oct 18 2021 03:38:50 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -76,72 +76,122 @@ Debugging Tools for Windows</h2>
 <div class="line">variable BUILD_VISUALIZER to ON, and then set the CMake variable FLEX_SDK</div>
 <div class="line">to point at the base of the directory where you unzipped the SDK files, or</div>
 <div class="line">set the FLEXROOT environment variable to point there:</div>
-</div><!-- fragment --><p>export FLEXROOT=/home/bruening/work/flex_sdk_4.1 ```</p>
-<p>For Java, if the java interpreter is not found by CMake, set the JAVA CMake variable. On Windows all that's needed is the Java runtime environment (e.g., from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>).</p>
-<p>You can build the Dr. Heapstat data gathering tool without either Flex or Java. By default, that's what is built: only if the BUILD_VISUALIZER CMake variable is enabled is the visualizer built. Be aware that the visualizer is a prototype built several years ago and it may not work out of the box on modern browsers, in particular on Windows. We are looking for contributors to build a new visualizer.</p>
-<p>In order to build the documentation, you will additionally need doxygen, which can be either a Cygwin package or native Windows. Currently the documentation is always built, so this is required.</p>
-<p>To build a Windows installation packagage (with an installer, instead of just a zip file for local installs), you will need to have <a href="http://nsis.sourceforge.net">NSIS</a> installed. If NSIS is not found, there will not be an error, but only the zip package on Windows will be built. Your NSIS install must be patched with the <a href="http://nsis.sourceforge.net/Special_Builds">"Large Strings" build</a> in order to support long PATHs. A configure-time check ensures this is in place. See <a href="http://code.google.com/p/drmemory/issues/detail?id=1029">Issue 1029</a> for more information.</p>
-<p>In order to build DynamoRIO you must have a version of perl. It can be either a Cygwin perl or a native Windows perl.</p>
-<hr  />
-<h1><a class="anchor" id="autotoc_md29"></a>
-Linux Setup</h1>
-<p>In order to build you'll need the following packages:</p>
-<ul>
-<li>gcc</li>
-<li>binutils</li>
-<li>cmake (at least version 3.7)</li>
-<li>perl</li>
-</ul>
-<p>To build Dr. Heapstat you will additionally need:</p>
-<ul>
-<li>Flex SDK</li>
-<li>Java</li>
-</ul>
-<p>In order to build the documentation, you will additionally need:</p>
-<ul>
-<li>doxygen</li>
-</ul>
-<p>If your machine does not have support for running 32-bit applications and its version of binutils is older than 2.18.50 then you'll need to set the <code>CMAKE_ASM_COMPILER</code> CMake cache variable to point at a GNU assembler of at least version 2.18.50.</p>
-<p>If you're using a 64-bit Linux distribution, be sure to install 32-bit development support (for Ubuntu, the <code>ia32-libs</code> and <code>g++-multilib</code> packages).</p>
-<hr  />
-<h1><a class="anchor" id="autotoc_md31"></a>
-Building with CMake</h1>
-<p>If you have all the required tools installed in standard locations, CMake will find them automatically. Only the Flex SDK and the DDK (which is only needed with non-full installations of Visual Studio) are likely to not be found as they do not normally live in system install directories. If you set the FLEXROOT and DDKROOT environment variables as specified above, then CMake should find all your tools without any custom CMake variable settings.</p>
-<h2><a class="anchor" id="autotoc_md32"></a>
-Configuring Your Build</h2>
-<p>First, configure your compiler. On Windows this means setting up the environment variables (including <code>PATH</code>). On Linux, if your compiler supports both 64-bit and 32-bit targets, you can select the non-default type by setting the <code>CFLAGS</code> and <code>CXXFLAGS</code> environment variables to the flags used to change your compiler's target. For example, for gcc:</p>
-<div class="fragment"><div class="line">export CXXFLAGS=-m32</div>
-<div class="line">export CFLAGS=-m32</div>
-</div><!-- fragment --><p>Next, in your shell (which you have set up for building with your compiler), create a build directory. Out-of-source builds are supported and recommended.</p>
-<p>You can configure using the CMake GUI or directly from the command line. We describe the GUI method first. To use the GUI, invoke it from the build directory, pointing at the source directory. For example, if your current directory is the base of the DynamoRIO tree:</p>
-<p>On Windows, from a Cygwin bash shell: </p><div class="fragment"><div class="line">mkdir build</div>
-<div class="line">cd build</div>
-<div class="line">CMakeSetup ..</div>
-</div><!-- fragment --><p>On Linux: </p><div class="fragment"><div class="line">mkdir build</div>
-<div class="line">cd build</div>
-<div class="line">cmake-gui ..</div>
-</div><!-- fragment --><p>Alternatively, <code>ccmake</code>, the curses-based GUI, can be used on Linux.</p>
-<p>On Windows, press "Configure" and select "Visual Studio 9 2008" or "Visual
-Studio 8 2005); on Linux, press Configure and then select "Unix Makefiles" (or, in <code>ccmake</code>, press <code>c</code> once).</p>
-<p>Now you can select the parameters to configure your build. The main parameters are as follows:</p>
-<ul>
-<li>TOOL_DR_HEAPSTAT = whether to build Dr. Heapstat instead of Dr. Memory</li>
-<li>CMAKE_BUILD_TYPE = whether to build Debug or RelWithDebInfo</li>
-</ul>
-<p>Note that the DynamoRIO build options are present as advanced options but in general should be ignored as Dr. Memory sets the appropriate settings.</p>
-<p>Press Configure and then OK (or <code>c</code> and then <code>g</code>) to complete the configuration step and generate the Makefiles. It is normal to see messages like this for various types (uint, ushort, bool, byte, sbyte, uint32, uint64, int32, int64):</p>
-<div class="fragment"><div class="line">-- Check size of <span class="keywordtype">bool</span></div>
-<div class="line">-- Check size of <span class="keywordtype">bool</span> - failed</div>
-</div><!-- fragment --><p>This is really a check for the existence of a typedef and it is normal for some such checks to print a "failure" message.</p>
-<p>On Windows, if you have both <code>cl</code> and <code>gcc</code> on your path, you can ensure that CMake selects <code>cl</code> by setting the <code>CC</code> and <code>CXX</code> environment variables. For example:</p>
-<div class="fragment"><div class="line">CC=cl CXX=cl cmake ..</div>
-</div><!-- fragment --><p>To improve compilation speed on Windows, if you have CMake 2.8 or later, you can turn off the progress and status messages with this CMake define:</p>
-<div class="fragment"><div class="line">-DCMAKE_RULE_MESSAGES:BOOL=OFF</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md33"></a>
+</div><!-- fragment --><p>export FLEXROOT=/home/bruening/work/flex_sdk_4.1 </p><div class="fragment"><div class="line">For Java, <span class="keywordflow">if</span> the java interpreter is not found by CMake, set the JAVA CMake</div>
+<div class="line">variable.  On Windows all that<span class="stringliteral">&#39;s needed is the Java runtime environment</span></div>
+<div class="line"><span class="stringliteral">(e.g., from http://www.oracle.com/technetwork/java/javase/downloads/index.html).</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">You can build the Dr. Heapstat data gathering tool without either Flex or</span></div>
+<div class="line"><span class="stringliteral">Java.  By default, that&#39;</span>s what is built: only <span class="keywordflow">if</span> the BUILD_VISUALIZER CMake</div>
+<div class="line">variable is enabled is the visualizer built.  Be aware that the visualizer</div>
+<div class="line">is a prototype built several years ago and it may not work out of the box</div>
+<div class="line">on modern browsers, in particular on Windows.  We are looking <span class="keywordflow">for</span></div>
+<div class="line">contributors to build a <span class="keyword">new</span> visualizer.</div>
+<div class="line"> </div>
+<div class="line">In order to build the documentation, you will additionally need doxygen,</div>
+<div class="line">which can be either a Cygwin <span class="keyword">package </span>or native Windows.  Currently the</div>
+<div class="line">documentation is always built, so this is required.</div>
+<div class="line"> </div>
+<div class="line">To build a Windows installation packagage (with an installer, instead of</div>
+<div class="line">just a zip file for local installs), you will need to have</div>
+<div class="line">[NSIS](http:<span class="comment">//nsis.sourceforge.net) installed.  If NSIS is not found, there</span></div>
+<div class="line">will not be an error, but only the zip package on Windows will be built.</div>
+<div class="line">Your NSIS install must be patched with the [&quot;Large Strings&quot; build](http:<span class="comment">//nsis.sourceforge.net/Special_Builds) in order to support long PATHs.  A configure-time check ensures this is in place.  See [Issue 1029](http://code.google.com/p/drmemory/issues/detail?id=1029) for more information.</span></div>
+<div class="line"> </div>
+<div class="line">In order to build DynamoRIO you must have a version of perl.  It can be</div>
+<div class="line">either a Cygwin perl or a native Windows perl.</div>
+<div class="line"> </div>
+<div class="line">----------------</div>
+<div class="line"> </div>
+<div class="line"># Linux Setup</div>
+<div class="line"> </div>
+<div class="line">In order to build you&#39;ll need the following packages:</div>
+<div class="line"> </div>
+<div class="line">  - gcc</div>
+<div class="line">  - binutils</div>
+<div class="line">  - cmake (at least version 3.7)</div>
+<div class="line">  - perl</div>
+<div class="line">  - libunwind-dev</div>
+<div class="line"> </div>
+<div class="line">To build Dr. Heapstat you will additionally need:</div>
+<div class="line"> </div>
+<div class="line">  - Flex SDK</div>
+<div class="line">  - Java</div>
+<div class="line"> </div>
+<div class="line">In order to build the documentation, you will additionally need:</div>
+<div class="line"> </div>
+<div class="line">  - doxygen</div>
+<div class="line"> </div>
+<div class="line">If your machine does not have support for running 32-bit applications and</div>
+<div class="line">its version of binutils is older than 2.18.50 then you&#39;ll need to set the</div>
+<div class="line">`CMAKE_ASM_COMPILER` CMake cache variable to point at a GNU assembler of at</div>
+<div class="line">least version 2.18.50.</div>
+<div class="line"> </div>
+<div class="line">If you&#39;re using a 64-bit Linux distribution, be sure to install 32-bit</div>
+<div class="line">development support (for Ubuntu, the `g++-multilib` package).</div>
+<div class="line"> </div>
+<div class="line">----------------</div>
+<div class="line"> </div>
+<div class="line"># Building with CMake</div>
+<div class="line"> </div>
+<div class="line">If you have all the required tools installed in standard locations, CMake</div>
+<div class="line">will find them automatically.  Only the Flex SDK and the DDK (which is only</div>
+<div class="line">needed with non-full installations of Visual Studio) are likely to</div>
+<div class="line">not be found as they do not normally live in system install directories.</div>
+<div class="line">If you set the FLEXROOT and DDKROOT environment variables as specified</div>
+<div class="line">above, then CMake should find all your tools without any custom CMake</div>
+<div class="line">variable settings.</div>
+<div class="line"> </div>
+<div class="line">## Configuring Your Build</div>
+<div class="line"> </div>
+<div class="line">First, configure your compiler.  On Windows this means setting up the</div>
+<div class="line">environment variables (including `PATH`).  On Linux, if your compiler</div>
+<div class="line">supports both 64-bit and 32-bit targets, you can select the non-default</div>
+<div class="line">type by setting the `CFLAGS` and `CXXFLAGS` environment variables to the</div>
+<div class="line">flags used to change your compiler&#39;s target.  For example, for gcc:</div>
+</div><!-- fragment --><p>export CXXFLAGS=-m32 export CFLAGS=-m32 </p><div class="fragment"><div class="line">Next, in your shell (which you have set up <span class="keywordflow">for</span> building with your</div>
+<div class="line">compiler), create a build directory.  Out-of-source builds are supported</div>
+<div class="line">and recommended.</div>
+<div class="line"> </div>
+<div class="line">You can configure <span class="keyword">using</span> the CMake GUI or directly from the command line.</div>
+<div class="line">We describe the GUI method first.  To use the GUI, invoke it from the build</div>
+<div class="line">directory, pointing at the source directory.  For example, <span class="keywordflow">if</span> your current</div>
+<div class="line">directory is the base of the DynamoRIO tree:</div>
+<div class="line"> </div>
+<div class="line">On Windows, from a Cygwin bash shell:</div>
+</div><!-- fragment --><p>mkdir build cd build CMakeSetup .. </p><div class="fragment"><div class="line">On Linux:</div>
+</div><!-- fragment --><p>mkdir build cd build cmake-gui .. </p><div class="fragment"><div class="line">Alternatively, `ccmake`, the curses-based GUI, can be used on Linux.</div>
+<div class="line"> </div>
+<div class="line">On Windows, press <span class="stringliteral">&quot;Configure&quot;</span> and select <span class="stringliteral">&quot;Visual Studio 9 2008&quot;</span> or <span class="stringliteral">&quot;Visual</span></div>
+<div class="line"><span class="stringliteral">Studio 8 2005); on Linux, press Configure and then select &quot;</span>Unix Makefiles<span class="stringliteral">&quot;</span></div>
+<div class="line"><span class="stringliteral">(or, in `ccmake`, press `c` once).</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">Now you can select the parameters to configure your build.  The main</span></div>
+<div class="line"><span class="stringliteral">parameters are as follows:</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral"> - TOOL_DR_HEAPSTAT = whether to build Dr. Heapstat instead of Dr. Memory</span></div>
+<div class="line"><span class="stringliteral"> - CMAKE_BUILD_TYPE = whether to build Debug or RelWithDebInfo</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">Note that the DynamoRIO build options are present as advanced options but</span></div>
+<div class="line"><span class="stringliteral">in general should be ignored as Dr. Memory sets the appropriate settings.</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">Press Configure and then OK (or `c` and then `g`) to complete the</span></div>
+<div class="line"><span class="stringliteral">configuration step and generate the Makefiles.  It is normal to see</span></div>
+<div class="line"><span class="stringliteral">messages like this for various types (uint, ushort, bool, byte, sbyte,</span></div>
+<div class="line"><span class="stringliteral">uint32, uint64, int32, int64):</span></div>
+</div><!-- fragment --><p>&ndash; Check size of bool &ndash; Check size of bool - failed </p><div class="fragment"><div class="line">This is really a check <span class="keywordflow">for</span> the existence of a <span class="keyword">typedef</span> and it is normal <span class="keywordflow">for</span></div>
+<div class="line">some such checks to print a <span class="stringliteral">&quot;failure&quot;</span> message.</div>
+<div class="line"> </div>
+<div class="line">On Windows, <span class="keywordflow">if</span> you have both `cl` and `gcc` on your path, you can ensure</div>
+<div class="line">that CMake selects `cl` by setting the `CC` and `CXX` environment</div>
+<div class="line">variables.  For example:</div>
+</div><!-- fragment --><p>CC=cl CXX=cl cmake .. </p><div class="fragment"><div class="line">To improve compilation speed on Windows, <span class="keywordflow">if</span> you have CMake 2.8 or later,</div>
+<div class="line">you can turn off the progress and status messages with <span class="keyword">this</span> CMake define:</div>
+</div><!-- fragment --><p>-DCMAKE_RULE_MESSAGES:BOOL=OFF ```</p>
+<h2><a class="anchor" id="autotoc_md28"></a>
 Building and Installing</h2>
 <p>After the configuration step is complete, type <code>cmake --build .</code> on Windows or <code>make</code> on Linux.</p>
 <p>For a release build on Windows, you'll need to use: </p><div class="fragment"><div class="line">cmake --build . --config RelWithDebInfo</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md34"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md29"></a>
 Configuring in Batch Mode</h2>
 <p>Instead of interactive configuration you can pass all your parameter changes to CMake on the command line. For example:</p>
 <p>On Windows, with code checked out into the current directory named <code>src</code>: </p><div class="fragment"><div class="line">mkdir ../build</div>
@@ -153,7 +203,7 @@ Configuring in Batch Mode</h2>
 <div class="line">cmake -DCMAKE_BUILD_TYPE=Debug ../src</div>
 <div class="line">make</div>
 </div><!-- fragment --><p>Developers may wish to pass <code>-DCMAKE_VERBOSE_MAKEFILE=1</code> to CMake in order to see the compilation command lines. They can alternatively be seen for any individual build with <code>make VERBOSE=1</code>.</p>
-<h2><a class="anchor" id="autotoc_md35"></a>
+<h2><a class="anchor" id="autotoc_md30"></a>
 Re-Configuring</h2>
 <p>You can re-run the configure step, using the same parameters that you originally used, in two ways:</p>
 <div class="fragment"><div class="line">make rebuild_cache</div>
@@ -162,10 +212,10 @@ Re-Configuring</h2>
 </div><!-- fragment --><p>With the latter command you can also change the configuration, but be sure to do a <code>make clean</code> prior to building as CMake does not perform dependence checking on this type of modification. As an example:</p>
 <div class="fragment"><div class="line">cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo .</div>
 <div class="line">make clean</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md36"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md31"></a>
 Using Ninja For Better Error Messages, Faster Builds, and Proper Incremental Builds</h2>
 <p>Ninja is a new build system that provides a much better build experience from the command line. We highly recommend using it on Windows. Follow the <a href="https://dynamorio.org/page_building.html#sec_ninja">DynamoRIO instructions for using Ninja</a>.</p>
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md32"></a>
 Using MSBuild For Better Error Messages And Faster Builds</h2>
 <p>We recommend Ninja (see above) over MSBuild, but we're leaving the information on MSBuild here as it is recommended over devenv.</p>
 <p>By default, CMake will use devenv when building for Visual Studio generators. An exception is CMake 2.8.4, which uses MSBuild by default, but does not build in parallel without passing the "/m" flag to MSBuild:</p>
@@ -223,5 +273,5 @@ Using MSBuild For Better Error Messages And Faster Builds</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.18900 --- Fri Oct 15 2021 03:01:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.5.0 --- Mon Oct 18 2021 03:38:50 &nbsp; <img border=0 src="favicon.png">
 </small></address>

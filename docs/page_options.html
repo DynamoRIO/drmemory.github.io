@@ -194,6 +194,9 @@ The number of frames, starting from the top, that must not match -src_allowlist 
 <li><b> -check_uninit_blocklist </b> &lt;string&gt; <br  />
 <em>default: ""</em> <br  />
 For each library or executable basename on this list, Dr. Memory suspends checking of uninitialized reads. Instead Dr. Memory marks all memory written by such modules as defined. This is a more efficient way to ignore all errors from a module than suppressing them or adding to the lib_blocklist option. Dr. Memory does automatically turn a whole-module suppression consisting of a single frame of the form 'modulename!*' into an entry on this list. The entries on this list can contain wildcards.</li>
+<li><b> -callstack_use_unwind </b> <br  />
+<em>default: IF_LINUX_ELSE(true, false)</em> <br  />
+Use unwind info rather than stack scanning and frame pointers where available to walk callstacks. When enabled, the other callstack options regarding frame pointers are ignored.</li>
 <li><b> -callstack_use_top_fp </b> <br  />
 <em>default: true</em> <br  />
 Whether to trust the top-level ebp/rbp register to hold the next frame pointer. If enabled, overridden when -callstack_use_top_fp_selectively is enabled. Normally trusting the register is correct. However, if a frameless function is on top of the stack, using the ebp register can cause a callstack to skip the next function. If this option is set to false, the callstack walk will perform a stack scan at the top of every callstack. This adds additional overhead in exchange for more accuracy, although in -light mode the additional accuracy has some tradeoffs and can result in incorrect frames. It should not be necessary to disable this option normally, unless an application or one of its static libraries is built with optimizations that omit frame pointers.</li>
@@ -555,5 +558,5 @@ Specify the fuzzer status log frequency in number of fuzz iterations (no status 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.18900 --- Fri Oct 15 2021 03:01:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.5.0 --- Mon Oct 18 2021 03:38:50 &nbsp; <img border=0 src="favicon.png">
 </small></address>
