@@ -99,7 +99,7 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Dr. Memory Runtime Option Reference", "page_options.html", null ],
-    [ "Release Notes for Version 2.3.18954", "page_release_notes.html", [
+    [ "Release Notes for Version 2.3.18967", "page_release_notes.html", [
       [ "Distribution Contents", "page_release_notes.html#sec_package", null ],
       [ "Changes Since Prior Releases", "page_release_notes.html#sec_changes", null ],
       [ "Limitations", "page_release_notes.html#sec_limits", [
