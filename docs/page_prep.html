@@ -37,15 +37,15 @@ Callstack Quality</h2>
 <p>If your application links with a static library that was built with frame pointer optimizations and you observe missing frames on your callstacks, try running with the Dr. Memory runtime options <code>-no_callstack_use_top_fp</code>, <code>-no_callstack_use_fp</code>, and <code>-callstack_conservative</code>. These will add some additional overhead on malloc-intensive applications, but should eliminate skipped frames.</p>
 <h1><a class="anchor" id="sec_prep_linux"></a>
 Linux</h1>
-<p>Dr. Memory currently only supports DWARF2 line information, not stabs. DWARF2 is the default for modern versions of <code>gcc</code>.</p>
+<p>Dr. Memory currently only supports DWARF2 through DWARF4 line information, not stabs nor DWARF5. DWARF4 can be requested from the compiler with the <code>-gdwarf-4</code> flag.</p>
 <p>Here is a sample command line for compiling your application that combines all of the above recommendations:</p>
-<pre class="fragment">g++ -g -fno-inline -fno-omit-frame-pointer myfile1.cpp myfile2.cpp -o myapp
+<pre class="fragment">g++ -g -gdwarf-4 -fno-inline -fno-omit-frame-pointer myfile1.cpp myfile2.cpp -o myapp
 </pre><h1><a class="anchor" id="sec_prep_mac"></a>
 Mac</h1>
 <p>Ensure your compiler is able to build 32-bit applications.</p>
-<p>Dr. Memory currently only supports DWARF2 line information, not stabs. DWARF2 is the default for modern versions of <code>gcc</code> as well as <code>clang</code>.</p>
+<p>Dr. Memory currently only supports DWARF2 through DWARF4 line information, not stabs nor DWARF5. DWARF4 can be requested from the compiler with the <code>-gdwarf-4</code> flag.</p>
 <p>Here is a sample command line for compiling your application that combines all of the above recommendations:</p>
-<pre class="fragment">c++ -m32 -g -fno-inline -fno-omit-frame-pointer myfile1.cpp myfile2.cpp -o myapp
+<pre class="fragment">c++ -m32 -g -gdwarf-4 -fno-inline -fno-omit-frame-pointer myfile1.cpp myfile2.cpp -o myapp
 </pre><h1><a class="anchor" id="sec_prep_windows"></a>
 Windows Visual Studio</h1>
 <p>To include debug information, use the <code>/Zi</code> flag to the Visual Studio compiler. From the IDE, Press Alt-F7 to bring up the configuration properties of your build target. Under "Configuration Properties | C/C++ |
@@ -99,5 +99,5 @@ Android</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.19327 --- Fri Sep 15 2023 03:07:33 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.6.0 --- Thu Sep 21 2023 18:52:44 &nbsp; <img border=0 src="favicon.png">
 </small></address>
