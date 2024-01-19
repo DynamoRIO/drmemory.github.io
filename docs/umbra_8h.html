@@ -112,46 +112,46 @@ Functions</h2></td></tr>
 <tr class="separator:af7bd0146652ec43ce742f1bbe040c459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a53bbe9aac961d63d73f5e8942d9826"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a8a53bbe9aac961d63d73f5e8942d9826">umbra_exit</a> (void)</td></tr>
 <tr class="separator:a8a53bbe9aac961d63d73f5e8942d9826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f0ff18a03e1655eae02473a2e5d496b"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a4f0ff18a03e1655eae02473a2e5d496b">umbra_create_mapping</a> (IN <a class="el" href="umbra_8h.html#a02f06c9a73ed394fd9ac892b5b9ecfb0">umbra_map_options_t</a> *ops, OUT <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> **map_out)</td></tr>
-<tr class="separator:a4f0ff18a03e1655eae02473a2e5d496b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ea226aa863c9e9d5feca0d7cc5e719d"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a9ea226aa863c9e9d5feca0d7cc5e719d">umbra_destroy_mapping</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map)</td></tr>
-<tr class="separator:a9ea226aa863c9e9d5feca0d7cc5e719d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a333fbe844ebf9f9b8a12316b1c0b0d"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a8a333fbe844ebf9f9b8a12316b1c0b0d">umbra_create_shadow_memory</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN <a class="el" href="umbra_8h.html#aa49d0c1fffdb93fdfd0db1278b1eaad9">umbra_shadow_memory_flags_t</a> flags, IN app_pc app_addr, IN size_t app_size, IN ptr_uint_t value, IN size_t value_size)</td></tr>
-<tr class="separator:a8a333fbe844ebf9f9b8a12316b1c0b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d62f09ccc7bdf92822428a951efb33a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a7d62f09ccc7bdf92822428a951efb33a">umbra_delete_shadow_memory</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN app_pc app_addr, IN size_t app_size)</td></tr>
-<tr class="separator:a7d62f09ccc7bdf92822428a951efb33a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c80f899839083562bd14355c4b2810d"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a7c80f899839083562bd14355c4b2810d">umbra_num_scratch_regs_for_translation</a> (OUT int *num_regs)</td></tr>
-<tr class="separator:a7c80f899839083562bd14355c4b2810d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4371a006da20f17c0621ee4dd2f0cc4"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#aa4371a006da20f17c0621ee4dd2f0cc4">umbra_insert_app_to_shadow</a> (IN void *drcontext, IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN instrlist_t *ilist, IN instr_t *where, IN reg_id_t addr_reg, IN reg_id_t *scratch_regs, IN int num_scratch_regs)</td></tr>
-<tr class="separator:aa4371a006da20f17c0621ee4dd2f0cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c27309e421f1d151fe8e29373c41b71"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a4c27309e421f1d151fe8e29373c41b71">umbra_read_shadow_memory</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN app_pc app_addr, IN size_t app_size, INOUT size_t *shadow_size, OUT byte *buffer)</td></tr>
-<tr class="separator:a4c27309e421f1d151fe8e29373c41b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af368cd2ef69d498900fecbeae39781f4"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#af368cd2ef69d498900fecbeae39781f4">umbra_write_shadow_memory</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN app_pc app_addr, IN size_t app_size, INOUT size_t *shadow_size, IN byte *buffer)</td></tr>
-<tr class="separator:af368cd2ef69d498900fecbeae39781f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafb51fb89b014b9bbf0dbe44c2d47b2a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#aafb51fb89b014b9bbf0dbe44c2d47b2a">umbra_shadow_set_range</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN app_pc app_addr, IN size_t app_size, OUT size_t *shadow_size, IN ptr_uint_t value, IN size_t value_size)</td></tr>
-<tr class="separator:aafb51fb89b014b9bbf0dbe44c2d47b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4622bfe2480822fd1212f3a3c61a94c0"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a4622bfe2480822fd1212f3a3c61a94c0">umbra_shadow_copy_range</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN app_pc app_src, IN app_pc app_dst, IN size_t app_size, OUT size_t *shadow_size)</td></tr>
-<tr class="separator:a4622bfe2480822fd1212f3a3c61a94c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a58ed96cd19b0aaa6415670aad9acc1"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a7a58ed96cd19b0aaa6415670aad9acc1">umbra_value_in_shadow_memory</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, INOUT app_pc *app_addr, IN size_t app_size, IN ptr_uint_t value, IN size_t value_size, OUT bool *found)</td></tr>
-<tr class="separator:a7a58ed96cd19b0aaa6415670aad9acc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c122a4fbf999b360fad30369848e279"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a6c122a4fbf999b360fad30369848e279">umbra_get_shadow_block_size</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, OUT size_t *size)</td></tr>
-<tr class="separator:a6c122a4fbf999b360fad30369848e279"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a5f5355c4d9334cbc386c7d385f12a0"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a7a5f5355c4d9334cbc386c7d385f12a0">umbra_iterate_app_memory</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN void *user_data, IN bool(*iter_func)(<a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, const dr_mem_info_t *info, void *user_data))</td></tr>
-<tr class="separator:a7a5f5355c4d9334cbc386c7d385f12a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada2c4b1e3f332078ae5c3c58c6ce7e94"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#ada2c4b1e3f332078ae5c3c58c6ce7e94">umbra_iterate_shadow_memory</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN void *user_data, IN <a class="el" href="umbra_8h.html#a2aa58774b9ee9f296b953695c9db57d5">shadow_iterate_func_t</a> iter_func)</td></tr>
-<tr class="separator:ada2c4b1e3f332078ae5c3c58c6ce7e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a720d39f0f8f8c8fa23a8d100acf2b414"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a720d39f0f8f8c8fa23a8d100acf2b414">umbra_get_shadow_memory_type</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN byte *shadow_addr, OUT <a class="el" href="umbra_8h.html#a218086740fc30ca9ec82ad9e1a8f94d0">umbra_shadow_memory_type_t</a> *shadow_type)</td></tr>
-<tr class="separator:a720d39f0f8f8c8fa23a8d100acf2b414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a372042a059dbdc71a4b045da3ff48cbb"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a372042a059dbdc71a4b045da3ff48cbb">umbra_shadow_memory_is_shared</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN byte *shadow_addr, OUT <a class="el" href="umbra_8h.html#a218086740fc30ca9ec82ad9e1a8f94d0">umbra_shadow_memory_type_t</a> *shadow_type)</td></tr>
-<tr class="separator:a372042a059dbdc71a4b045da3ff48cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ac818f59d2b343c99d6002301dff2b9"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a0ac818f59d2b343c99d6002301dff2b9">umbra_get_shadow_memory</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN app_pc app_addr, OUT byte **shadow_addr, INOUT <a class="el" href="umbra_8h.html#a3ed35b3fd203df8da97d324b87c3ec14">umbra_shadow_memory_info_t</a> *shadow_info)</td></tr>
-<tr class="separator:a0ac818f59d2b343c99d6002301dff2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad03e483ea5b7d2047efc879f5c2b68d1"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#ad03e483ea5b7d2047efc879f5c2b68d1">umbra_replace_shared_shadow_memory</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN app_pc app_addr, OUT byte **shadow_addr)</td></tr>
-<tr class="separator:ad03e483ea5b7d2047efc879f5c2b68d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64e7e565d3761fbcbd17d3677b607e6b"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a64e7e565d3761fbcbd17d3677b607e6b">umbra_create_shared_shadow_block</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN ptr_uint_t value, IN size_t value_size, OUT byte **block)</td></tr>
-<tr class="separator:a64e7e565d3761fbcbd17d3677b607e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f47b3624ff3705ae9622335f8ecbf7f"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a3f47b3624ff3705ae9622335f8ecbf7f">umbra_get_shared_shadow_block</a> (IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, IN ptr_uint_t value, IN size_t value_size, OUT byte **block)</td></tr>
-<tr class="separator:a3f47b3624ff3705ae9622335f8ecbf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a0a6515a2fccc30ed54d7425dae5102"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a9a0a6515a2fccc30ed54d7425dae5102">umbra_create_mapping</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#a02f06c9a73ed394fd9ac892b5b9ecfb0">umbra_map_options_t</a> *ops, DR_PARAM_OUT <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> **map_out)</td></tr>
+<tr class="separator:a9a0a6515a2fccc30ed54d7425dae5102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf73f4014c48cef673def48f6f6e3426"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#aaf73f4014c48cef673def48f6f6e3426">umbra_destroy_mapping</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map)</td></tr>
+<tr class="separator:aaf73f4014c48cef673def48f6f6e3426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae53d3b06fb7ebd633c34a3eb9f3e7a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a3ae53d3b06fb7ebd633c34a3eb9f3e7a">umbra_create_shadow_memory</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN <a class="el" href="umbra_8h.html#aa49d0c1fffdb93fdfd0db1278b1eaad9">umbra_shadow_memory_flags_t</a> flags, DR_PARAM_IN app_pc app_addr, DR_PARAM_IN size_t app_size, DR_PARAM_IN ptr_uint_t value, DR_PARAM_IN size_t value_size)</td></tr>
+<tr class="separator:a3ae53d3b06fb7ebd633c34a3eb9f3e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a4b1cfe4dbf03fbd9393f50500493a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#ab7a4b1cfe4dbf03fbd9393f50500493a">umbra_delete_shadow_memory</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN app_pc app_addr, DR_PARAM_IN size_t app_size)</td></tr>
+<tr class="separator:ab7a4b1cfe4dbf03fbd9393f50500493a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f360679b61e6c6c91e602ffa1d72a7b"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a7f360679b61e6c6c91e602ffa1d72a7b">umbra_num_scratch_regs_for_translation</a> (DR_PARAM_OUT int *num_regs)</td></tr>
+<tr class="separator:a7f360679b61e6c6c91e602ffa1d72a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec06316ea847006daec231a1318047ad"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#aec06316ea847006daec231a1318047ad">umbra_insert_app_to_shadow</a> (DR_PARAM_IN void *drcontext, DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN instrlist_t *ilist, DR_PARAM_IN instr_t *where, DR_PARAM_IN reg_id_t addr_reg, DR_PARAM_IN reg_id_t *scratch_regs, DR_PARAM_IN int num_scratch_regs)</td></tr>
+<tr class="separator:aec06316ea847006daec231a1318047ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b88734bd9d3c234edb3a65f340be411"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a4b88734bd9d3c234edb3a65f340be411">umbra_read_shadow_memory</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN app_pc app_addr, DR_PARAM_IN size_t app_size, DR_PARAM_INOUT size_t *shadow_size, DR_PARAM_OUT byte *buffer)</td></tr>
+<tr class="separator:a4b88734bd9d3c234edb3a65f340be411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c76b6f2fd1fe4748ee6881ba2e4334"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a45c76b6f2fd1fe4748ee6881ba2e4334">umbra_write_shadow_memory</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN app_pc app_addr, DR_PARAM_IN size_t app_size, DR_PARAM_INOUT size_t *shadow_size, DR_PARAM_IN byte *buffer)</td></tr>
+<tr class="separator:a45c76b6f2fd1fe4748ee6881ba2e4334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5104a676228a1d80fe80edbf3095477"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#ab5104a676228a1d80fe80edbf3095477">umbra_shadow_set_range</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN app_pc app_addr, DR_PARAM_IN size_t app_size, DR_PARAM_OUT size_t *shadow_size, DR_PARAM_IN ptr_uint_t value, DR_PARAM_IN size_t value_size)</td></tr>
+<tr class="separator:ab5104a676228a1d80fe80edbf3095477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9040f9c8c479334e8c1b6fa2655d905f"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a9040f9c8c479334e8c1b6fa2655d905f">umbra_shadow_copy_range</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN app_pc app_src, DR_PARAM_IN app_pc app_dst, DR_PARAM_IN size_t app_size, DR_PARAM_OUT size_t *shadow_size)</td></tr>
+<tr class="separator:a9040f9c8c479334e8c1b6fa2655d905f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ca42246ada089dfb91574fd0d18c4c"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a27ca42246ada089dfb91574fd0d18c4c">umbra_value_in_shadow_memory</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_INOUT app_pc *app_addr, DR_PARAM_IN size_t app_size, DR_PARAM_IN ptr_uint_t value, DR_PARAM_IN size_t value_size, DR_PARAM_OUT bool *found)</td></tr>
+<tr class="separator:a27ca42246ada089dfb91574fd0d18c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b310b4f5298299c7214c2742a5d812c"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a5b310b4f5298299c7214c2742a5d812c">umbra_get_shadow_block_size</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_OUT size_t *size)</td></tr>
+<tr class="separator:a5b310b4f5298299c7214c2742a5d812c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a666d0c7cfadcc8e5fd96434d7be3eff8"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a666d0c7cfadcc8e5fd96434d7be3eff8">umbra_iterate_app_memory</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN void *user_data, DR_PARAM_IN bool(*iter_func)(<a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, const dr_mem_info_t *info, void *user_data))</td></tr>
+<tr class="separator:a666d0c7cfadcc8e5fd96434d7be3eff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96144f3c1d307f55a32bace1f65e9024"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a96144f3c1d307f55a32bace1f65e9024">umbra_iterate_shadow_memory</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN void *user_data, DR_PARAM_IN <a class="el" href="umbra_8h.html#a2aa58774b9ee9f296b953695c9db57d5">shadow_iterate_func_t</a> iter_func)</td></tr>
+<tr class="separator:a96144f3c1d307f55a32bace1f65e9024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39640bfcf17bab37f23d6a0319fa819f"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a39640bfcf17bab37f23d6a0319fa819f">umbra_get_shadow_memory_type</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN byte *shadow_addr, DR_PARAM_OUT <a class="el" href="umbra_8h.html#a218086740fc30ca9ec82ad9e1a8f94d0">umbra_shadow_memory_type_t</a> *shadow_type)</td></tr>
+<tr class="separator:a39640bfcf17bab37f23d6a0319fa819f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e932542a171f8d68ed770192d88d86"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#ac5e932542a171f8d68ed770192d88d86">umbra_shadow_memory_is_shared</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN byte *shadow_addr, DR_PARAM_OUT <a class="el" href="umbra_8h.html#a218086740fc30ca9ec82ad9e1a8f94d0">umbra_shadow_memory_type_t</a> *shadow_type)</td></tr>
+<tr class="separator:ac5e932542a171f8d68ed770192d88d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d8226d2905cb851e449a9229e568e4"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a60d8226d2905cb851e449a9229e568e4">umbra_get_shadow_memory</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN app_pc app_addr, DR_PARAM_OUT byte **shadow_addr, DR_PARAM_INOUT <a class="el" href="umbra_8h.html#a3ed35b3fd203df8da97d324b87c3ec14">umbra_shadow_memory_info_t</a> *shadow_info)</td></tr>
+<tr class="separator:a60d8226d2905cb851e449a9229e568e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24263e605e166a3b2c40f34eae25a7b7"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a24263e605e166a3b2c40f34eae25a7b7">umbra_replace_shared_shadow_memory</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN app_pc app_addr, DR_PARAM_OUT byte **shadow_addr)</td></tr>
+<tr class="separator:a24263e605e166a3b2c40f34eae25a7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6267039b4b682fafbee3175add6e3d1c"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a6267039b4b682fafbee3175add6e3d1c">umbra_create_shared_shadow_block</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN ptr_uint_t value, DR_PARAM_IN size_t value_size, DR_PARAM_OUT byte **block)</td></tr>
+<tr class="separator:a6267039b4b682fafbee3175add6e3d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664e9b554c2292e40830cd5a5a1656c6"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a664e9b554c2292e40830cd5a5a1656c6">umbra_get_shared_shadow_block</a> (DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, DR_PARAM_IN ptr_uint_t value, DR_PARAM_IN size_t value_size, DR_PARAM_OUT byte **block)</td></tr>
+<tr class="separator:a664e9b554c2292e40830cd5a5a1656c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16080e1e17da8b608c5736f45644e713"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a16080e1e17da8b608c5736f45644e713">umbra_shadow_memory_info_init</a> (<a class="el" href="umbra_8h.html#a3ed35b3fd203df8da97d324b87c3ec14">umbra_shadow_memory_info_t</a> *info)</td></tr>
 <tr class="separator:a16080e1e17da8b608c5736f45644e713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3750bcdc466df2ae434556191a3ecca6"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="umbra_8h.html#a3750bcdc466df2ae434556191a3ecca6">umbra_clear_redundant_blocks</a> (<a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, uint *count)</td></tr>
@@ -259,7 +259,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Opaque "Umbra map handle" type used to refer to a particular Umbra mapping scheme object created by <a class="el" href="umbra_8h.html#a4f0ff18a03e1655eae02473a2e5d496b">umbra_create_mapping()</a>, </p>
+<p>Opaque "Umbra map handle" type used to refer to a particular Umbra mapping scheme object created by <a class="el" href="umbra_8h.html#a9a0a6515a2fccc30ed54d7425dae5102">umbra_create_mapping()</a>, </p>
 
 </div>
 </div>
@@ -425,8 +425,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4f0ff18a03e1655eae02473a2e5d496b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f0ff18a03e1655eae02473a2e5d496b">&#9670;&nbsp;</a></span>umbra_create_mapping()</h2>
+<a id="a9a0a6515a2fccc30ed54d7425dae5102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a0a6515a2fccc30ed54d7425dae5102">&#9670;&nbsp;</a></span>umbra_create_mapping()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -434,13 +434,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_create_mapping </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#a02f06c9a73ed394fd9ac892b5b9ecfb0">umbra_map_options_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#a02f06c9a73ed394fd9ac892b5b9ecfb0">umbra_map_options_t</a> *&#160;</td>
           <td class="paramname"><em>ops</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> **&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> **&#160;</td>
           <td class="paramname"><em>map_out</em>&#160;</td>
         </tr>
         <tr>
@@ -460,8 +460,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8a333fbe844ebf9f9b8a12316b1c0b0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a333fbe844ebf9f9b8a12316b1c0b0d">&#9670;&nbsp;</a></span>umbra_create_shadow_memory()</h2>
+<a id="a3ae53d3b06fb7ebd633c34a3eb9f3e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae53d3b06fb7ebd633c34a3eb9f3e7a">&#9670;&nbsp;</a></span>umbra_create_shadow_memory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -469,37 +469,37 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_create_shadow_memory </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#aa49d0c1fffdb93fdfd0db1278b1eaad9">umbra_shadow_memory_flags_t</a>&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#aa49d0c1fffdb93fdfd0db1278b1eaad9">umbra_shadow_memory_flags_t</a>&#160;</td>
           <td class="paramname"><em>flags</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN app_pc&#160;</td>
+          <td class="paramtype">DR_PARAM_IN app_pc&#160;</td>
           <td class="paramname"><em>app_addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>app_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN ptr_uint_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN ptr_uint_t&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>value_size</em>&#160;</td>
         </tr>
         <tr>
@@ -528,8 +528,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a64e7e565d3761fbcbd17d3677b607e6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64e7e565d3761fbcbd17d3677b607e6b">&#9670;&nbsp;</a></span>umbra_create_shared_shadow_block()</h2>
+<a id="a6267039b4b682fafbee3175add6e3d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6267039b4b682fafbee3175add6e3d1c">&#9670;&nbsp;</a></span>umbra_create_shared_shadow_block()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -537,25 +537,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_create_shared_shadow_block </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN ptr_uint_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN ptr_uint_t&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>value_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT byte **&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT byte **&#160;</td>
           <td class="paramname"><em>block</em>&#160;</td>
         </tr>
         <tr>
@@ -581,8 +581,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7d62f09ccc7bdf92822428a951efb33a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d62f09ccc7bdf92822428a951efb33a">&#9670;&nbsp;</a></span>umbra_delete_shadow_memory()</h2>
+<a id="ab7a4b1cfe4dbf03fbd9393f50500493a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7a4b1cfe4dbf03fbd9393f50500493a">&#9670;&nbsp;</a></span>umbra_delete_shadow_memory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -590,19 +590,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_delete_shadow_memory </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN app_pc&#160;</td>
+          <td class="paramtype">DR_PARAM_IN app_pc&#160;</td>
           <td class="paramname"><em>app_addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>app_size</em>&#160;</td>
         </tr>
         <tr>
@@ -626,8 +626,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9ea226aa863c9e9d5feca0d7cc5e719d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ea226aa863c9e9d5feca0d7cc5e719d">&#9670;&nbsp;</a></span>umbra_destroy_mapping()</h2>
+<a id="aaf73f4014c48cef673def48f6f6e3426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf73f4014c48cef673def48f6f6e3426">&#9670;&nbsp;</a></span>umbra_destroy_mapping()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -635,7 +635,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_destroy_mapping </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em></td><td>)</td>
           <td></td>
         </tr>
@@ -664,8 +664,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6c122a4fbf999b360fad30369848e279"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c122a4fbf999b360fad30369848e279">&#9670;&nbsp;</a></span>umbra_get_shadow_block_size()</h2>
+<a id="a5b310b4f5298299c7214c2742a5d812c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b310b4f5298299c7214c2742a5d812c">&#9670;&nbsp;</a></span>umbra_get_shadow_block_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -673,13 +673,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_get_shadow_block_size </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT size_t *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT size_t *&#160;</td>
           <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
@@ -700,8 +700,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0ac818f59d2b343c99d6002301dff2b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ac818f59d2b343c99d6002301dff2b9">&#9670;&nbsp;</a></span>umbra_get_shadow_memory()</h2>
+<a id="a60d8226d2905cb851e449a9229e568e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d8226d2905cb851e449a9229e568e4">&#9670;&nbsp;</a></span>umbra_get_shadow_memory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -709,25 +709,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_get_shadow_memory </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN app_pc&#160;</td>
+          <td class="paramtype">DR_PARAM_IN app_pc&#160;</td>
           <td class="paramname"><em>app_addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT byte **&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT byte **&#160;</td>
           <td class="paramname"><em>shadow_addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">INOUT <a class="el" href="umbra_8h.html#a3ed35b3fd203df8da97d324b87c3ec14">umbra_shadow_memory_info_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_INOUT <a class="el" href="umbra_8h.html#a3ed35b3fd203df8da97d324b87c3ec14">umbra_shadow_memory_info_t</a> *&#160;</td>
           <td class="paramname"><em>shadow_info</em>&#160;</td>
         </tr>
         <tr>
@@ -747,7 +747,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>For lazily allocated shadow memory, this routine will not allocate shadow memory that is not yet allocated. The caller must explicitly call <a class="el" href="umbra_8h.html#a8a333fbe844ebf9f9b8a12316b1c0b0d">umbra_create_shadow_memory()</a> prior to de-referencing the returned shadow address if the type is UMBRA_SHADOW_MEMORY_TYPE_SHADOW_NOT_ALLOC. Use <a class="el" href="umbra_8h.html#a4c27309e421f1d151fe8e29373c41b71">umbra_read_shadow_memory()</a> or <a class="el" href="umbra_8h.html#af368cd2ef69d498900fecbeae39781f4">umbra_write_shadow_memory()</a> if automatic allocation is desired.</p>
+<p>For lazily allocated shadow memory, this routine will not allocate shadow memory that is not yet allocated. The caller must explicitly call <a class="el" href="umbra_8h.html#a3ae53d3b06fb7ebd633c34a3eb9f3e7a">umbra_create_shadow_memory()</a> prior to de-referencing the returned shadow address if the type is UMBRA_SHADOW_MEMORY_TYPE_SHADOW_NOT_ALLOC. Use <a class="el" href="umbra_8h.html#a4b88734bd9d3c234edb3a65f340be411">umbra_read_shadow_memory()</a> or <a class="el" href="umbra_8h.html#a45c76b6f2fd1fe4748ee6881ba2e4334">umbra_write_shadow_memory()</a> if automatic allocation is desired.</p>
 <dl class="section note"><dt>Note</dt><dd>: <code>shadow_info-&gt;struct_size</code> must be set to <code>sizeof(umbra_shadow_memory_info_t)</code> for compatiblity.</dd>
 <dd>
 : <code>shadow_info</code> contains the information about the shadow memory block and its application memory, so the caller can cache the information and access the shadow memory later without querying Umbra again. However, if the shadow memory is a special shared memory block, it may be replaced with normal shadow memory and the caller will not see it, and the caller will see the old special value if using cached information. It is up to the caller to decide whether this is acceptable.</dd>
@@ -756,8 +756,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a720d39f0f8f8c8fa23a8d100acf2b414"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a720d39f0f8f8c8fa23a8d100acf2b414">&#9670;&nbsp;</a></span>umbra_get_shadow_memory_type()</h2>
+<a id="a39640bfcf17bab37f23d6a0319fa819f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39640bfcf17bab37f23d6a0319fa819f">&#9670;&nbsp;</a></span>umbra_get_shadow_memory_type()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -765,19 +765,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_get_shadow_memory_type </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN byte *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN byte *&#160;</td>
           <td class="paramname"><em>shadow_addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT <a class="el" href="umbra_8h.html#a218086740fc30ca9ec82ad9e1a8f94d0">umbra_shadow_memory_type_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT <a class="el" href="umbra_8h.html#a218086740fc30ca9ec82ad9e1a8f94d0">umbra_shadow_memory_type_t</a> *&#160;</td>
           <td class="paramname"><em>shadow_type</em>&#160;</td>
         </tr>
         <tr>
@@ -800,8 +800,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3f47b3624ff3705ae9622335f8ecbf7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f47b3624ff3705ae9622335f8ecbf7f">&#9670;&nbsp;</a></span>umbra_get_shared_shadow_block()</h2>
+<a id="a664e9b554c2292e40830cd5a5a1656c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a664e9b554c2292e40830cd5a5a1656c6">&#9670;&nbsp;</a></span>umbra_get_shared_shadow_block()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -809,25 +809,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_get_shared_shadow_block </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN ptr_uint_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN ptr_uint_t&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>value_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT byte **&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT byte **&#160;</td>
           <td class="paramname"><em>block</em>&#160;</td>
         </tr>
         <tr>
@@ -877,8 +877,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa4371a006da20f17c0621ee4dd2f0cc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4371a006da20f17c0621ee4dd2f0cc4">&#9670;&nbsp;</a></span>umbra_insert_app_to_shadow()</h2>
+<a id="aec06316ea847006daec231a1318047ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec06316ea847006daec231a1318047ad">&#9670;&nbsp;</a></span>umbra_insert_app_to_shadow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -886,43 +886,43 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_insert_app_to_shadow </td>
           <td>(</td>
-          <td class="paramtype">IN void *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN void *&#160;</td>
           <td class="paramname"><em>drcontext</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN instrlist_t *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN instrlist_t *&#160;</td>
           <td class="paramname"><em>ilist</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN instr_t *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN instr_t *&#160;</td>
           <td class="paramname"><em>where</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN reg_id_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN reg_id_t&#160;</td>
           <td class="paramname"><em>addr_reg</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN reg_id_t *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN reg_id_t *&#160;</td>
           <td class="paramname"><em>scratch_regs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN int&#160;</td>
+          <td class="paramtype">DR_PARAM_IN int&#160;</td>
           <td class="paramname"><em>num_scratch_regs</em>&#160;</td>
         </tr>
         <tr>
@@ -952,8 +952,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7a5f5355c4d9334cbc386c7d385f12a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a5f5355c4d9334cbc386c7d385f12a0">&#9670;&nbsp;</a></span>umbra_iterate_app_memory()</h2>
+<a id="a666d0c7cfadcc8e5fd96434d7be3eff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a666d0c7cfadcc8e5fd96434d7be3eff8">&#9670;&nbsp;</a></span>umbra_iterate_app_memory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -961,19 +961,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_iterate_app_memory </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN void *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN void *&#160;</td>
           <td class="paramname"><em>user_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN bool(*)(<a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, const dr_mem_info_t *info, void *user_data)&#160;</td>
+          <td class="paramtype">DR_PARAM_IN bool(*)(<a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *map, const dr_mem_info_t *info, void *user_data)&#160;</td>
           <td class="paramname"><em>iter_func</em>&#160;</td>
         </tr>
         <tr>
@@ -996,8 +996,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ada2c4b1e3f332078ae5c3c58c6ce7e94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada2c4b1e3f332078ae5c3c58c6ce7e94">&#9670;&nbsp;</a></span>umbra_iterate_shadow_memory()</h2>
+<a id="a96144f3c1d307f55a32bace1f65e9024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96144f3c1d307f55a32bace1f65e9024">&#9670;&nbsp;</a></span>umbra_iterate_shadow_memory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1005,19 +1005,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_iterate_shadow_memory </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN void *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN void *&#160;</td>
           <td class="paramname"><em>user_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#a2aa58774b9ee9f296b953695c9db57d5">shadow_iterate_func_t</a>&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#a2aa58774b9ee9f296b953695c9db57d5">shadow_iterate_func_t</a>&#160;</td>
           <td class="paramname"><em>iter_func</em>&#160;</td>
         </tr>
         <tr>
@@ -1039,8 +1039,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7c80f899839083562bd14355c4b2810d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c80f899839083562bd14355c4b2810d">&#9670;&nbsp;</a></span>umbra_num_scratch_regs_for_translation()</h2>
+<a id="a7f360679b61e6c6c91e602ffa1d72a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f360679b61e6c6c91e602ffa1d72a7b">&#9670;&nbsp;</a></span>umbra_num_scratch_regs_for_translation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1048,7 +1048,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_num_scratch_regs_for_translation </td>
           <td>(</td>
-          <td class="paramtype">OUT int *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT int *&#160;</td>
           <td class="paramname"><em>num_regs</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1064,8 +1064,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4c27309e421f1d151fe8e29373c41b71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c27309e421f1d151fe8e29373c41b71">&#9670;&nbsp;</a></span>umbra_read_shadow_memory()</h2>
+<a id="a4b88734bd9d3c234edb3a65f340be411"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b88734bd9d3c234edb3a65f340be411">&#9670;&nbsp;</a></span>umbra_read_shadow_memory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1073,31 +1073,31 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_read_shadow_memory </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN app_pc&#160;</td>
+          <td class="paramtype">DR_PARAM_IN app_pc&#160;</td>
           <td class="paramname"><em>app_addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>app_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">INOUT size_t *&#160;</td>
+          <td class="paramtype">DR_PARAM_INOUT size_t *&#160;</td>
           <td class="paramname"><em>shadow_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT byte *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT byte *&#160;</td>
           <td class="paramname"><em>buffer</em>&#160;</td>
         </tr>
         <tr>
@@ -1122,8 +1122,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad03e483ea5b7d2047efc879f5c2b68d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad03e483ea5b7d2047efc879f5c2b68d1">&#9670;&nbsp;</a></span>umbra_replace_shared_shadow_memory()</h2>
+<a id="a24263e605e166a3b2c40f34eae25a7b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24263e605e166a3b2c40f34eae25a7b7">&#9670;&nbsp;</a></span>umbra_replace_shared_shadow_memory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1131,19 +1131,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_replace_shared_shadow_memory </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN app_pc&#160;</td>
+          <td class="paramtype">DR_PARAM_IN app_pc&#160;</td>
           <td class="paramname"><em>app_addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT byte **&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT byte **&#160;</td>
           <td class="paramname"><em>shadow_addr</em>&#160;</td>
         </tr>
         <tr>
@@ -1165,8 +1165,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4622bfe2480822fd1212f3a3c61a94c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4622bfe2480822fd1212f3a3c61a94c0">&#9670;&nbsp;</a></span>umbra_shadow_copy_range()</h2>
+<a id="a9040f9c8c479334e8c1b6fa2655d905f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9040f9c8c479334e8c1b6fa2655d905f">&#9670;&nbsp;</a></span>umbra_shadow_copy_range()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1174,31 +1174,31 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_shadow_copy_range </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN app_pc&#160;</td>
+          <td class="paramtype">DR_PARAM_IN app_pc&#160;</td>
           <td class="paramname"><em>app_src</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN app_pc&#160;</td>
+          <td class="paramtype">DR_PARAM_IN app_pc&#160;</td>
           <td class="paramname"><em>app_dst</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>app_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT size_t *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT size_t *&#160;</td>
           <td class="paramname"><em>shadow_size</em>&#160;</td>
         </tr>
         <tr>
@@ -1251,8 +1251,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a372042a059dbdc71a4b045da3ff48cbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a372042a059dbdc71a4b045da3ff48cbb">&#9670;&nbsp;</a></span>umbra_shadow_memory_is_shared()</h2>
+<a id="ac5e932542a171f8d68ed770192d88d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e932542a171f8d68ed770192d88d86">&#9670;&nbsp;</a></span>umbra_shadow_memory_is_shared()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1260,19 +1260,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_shadow_memory_is_shared </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN byte *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN byte *&#160;</td>
           <td class="paramname"><em>shadow_addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT <a class="el" href="umbra_8h.html#a218086740fc30ca9ec82ad9e1a8f94d0">umbra_shadow_memory_type_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT <a class="el" href="umbra_8h.html#a218086740fc30ca9ec82ad9e1a8f94d0">umbra_shadow_memory_type_t</a> *&#160;</td>
           <td class="paramname"><em>shadow_type</em>&#160;</td>
         </tr>
         <tr>
@@ -1295,8 +1295,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aafb51fb89b014b9bbf0dbe44c2d47b2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafb51fb89b014b9bbf0dbe44c2d47b2a">&#9670;&nbsp;</a></span>umbra_shadow_set_range()</h2>
+<a id="ab5104a676228a1d80fe80edbf3095477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5104a676228a1d80fe80edbf3095477">&#9670;&nbsp;</a></span>umbra_shadow_set_range()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1304,37 +1304,37 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_shadow_set_range </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN app_pc&#160;</td>
+          <td class="paramtype">DR_PARAM_IN app_pc&#160;</td>
           <td class="paramname"><em>app_addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>app_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT size_t *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT size_t *&#160;</td>
           <td class="paramname"><em>shadow_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN ptr_uint_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN ptr_uint_t&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>value_size</em>&#160;</td>
         </tr>
         <tr>
@@ -1360,8 +1360,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7a58ed96cd19b0aaa6415670aad9acc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a58ed96cd19b0aaa6415670aad9acc1">&#9670;&nbsp;</a></span>umbra_value_in_shadow_memory()</h2>
+<a id="a27ca42246ada089dfb91574fd0d18c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ca42246ada089dfb91574fd0d18c4c">&#9670;&nbsp;</a></span>umbra_value_in_shadow_memory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1369,37 +1369,37 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_value_in_shadow_memory </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">INOUT app_pc *&#160;</td>
+          <td class="paramtype">DR_PARAM_INOUT app_pc *&#160;</td>
           <td class="paramname"><em>app_addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>app_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN ptr_uint_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN ptr_uint_t&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>value_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>found</em>&#160;</td>
         </tr>
         <tr>
@@ -1425,8 +1425,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af368cd2ef69d498900fecbeae39781f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af368cd2ef69d498900fecbeae39781f4">&#9670;&nbsp;</a></span>umbra_write_shadow_memory()</h2>
+<a id="a45c76b6f2fd1fe4748ee6881ba2e4334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c76b6f2fd1fe4748ee6881ba2e4334">&#9670;&nbsp;</a></span>umbra_write_shadow_memory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1434,31 +1434,31 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="drmemory__framework_8h.html#afcc3ee43c88eeb409c25459be608619b">drmf_status_t</a> umbra_write_shadow_memory </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196">umbra_map_t</a> *&#160;</td>
           <td class="paramname"><em>map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN app_pc&#160;</td>
+          <td class="paramtype">DR_PARAM_IN app_pc&#160;</td>
           <td class="paramname"><em>app_addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN size_t&#160;</td>
+          <td class="paramtype">DR_PARAM_IN size_t&#160;</td>
           <td class="paramname"><em>app_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">INOUT size_t *&#160;</td>
+          <td class="paramtype">DR_PARAM_INOUT size_t *&#160;</td>
           <td class="paramname"><em>shadow_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN byte *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN byte *&#160;</td>
           <td class="paramname"><em>buffer</em>&#160;</td>
         </tr>
         <tr>
@@ -1489,5 +1489,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.19621 --- Fri Jan 12 2024 03:08:32 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.19737 --- Fri Jan 19 2024 03:08:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>
