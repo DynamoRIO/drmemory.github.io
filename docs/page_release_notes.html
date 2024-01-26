@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 2.3.19621"
+title: "Release Notes for Version 2.3.19737"
 layout: default
 permalink: /page_release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /page_release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 2.3.19621 </div>  </div>
+<div class="title">Release Notes for Version 2.3.19737 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -54,7 +54,7 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 2.3.19621. The changes between 2.3.19621 and version 2.5.0 include:</p><ul>
+<p>The current version is 2.3.19737. The changes between 2.3.19737 and version 2.5.0 include:</p><ul>
 <li>Added glibc 2.34+ support on Linux.</li>
 </ul>
 <p>The changes between 2.5.0 and version 2.4.0 include:</p><ul>
@@ -126,7 +126,7 @@ Changes Since Prior Releases</h1>
 <li>Changed details of the callstack maximum frame options. Added two new options: -malloc_max_frames, used for leak reports (and mismatch aux info), and -free_max_frames, used for -delay_frees_stack. Changed the default -callstack_max_frames to 20. -malloc_max_frames defaults to the original 12, and -free_max_frames is at 6.</li>
 <li>Added a new option -check_uninit_blacklist to reduce overhead on modules where no uninitialized read error reporting is desired. Dr. Memory automatically adds to this list when it sees a whole-module suppression.</li>
 <li>Disabled checks for mixing C library heap routines with Windows API heap routines (-check_heap_mismatch) for modules that contain static libc.</li>
-<li>Changed the <a class="el" href="drsymcache_8h.html#a8370402f3a8d154889e5f5346158b328">drsymcache_lookup()</a> interface.</li>
+<li>Changed the <a class="el" href="drsymcache_8h.html#a45a42820652f5c17dea469d49545ade5">drsymcache_lookup()</a> interface.</li>
 <li>Added extra information to unaddressable error titles to make several common types of such errors easier to identify: "UNADDRESSABLE ACCESS of freed memory", "UNADDRESSABLE ACCESS beyond heap bounds", and "UNADDRESSABLE ACCESS beyond top of stack".</li>
 <li>Renamed option -stderr to -use_stderr.</li>
 </ul>
@@ -135,15 +135,15 @@ Changes Since Prior Releases</h1>
 <li>Changed Windows PDB symbols to collapse template parameters to "&lt;&gt;" to shrink and simplify callstacks and suppressions. The old behavior can be requested by passing 0x1000 to the -callstack_style option.</li>
 <li>Changed Linux and MinGW symbols to omit the "()" in C++ symbol names.</li>
 <li>Added a new Dr. Memory Framework Extension, Dr. SymCache or drsymcache, which provides persistent caching of symbol lookup data to reduce startup time overhead on large applications.</li>
-<li>Clarified the final parameter to <a class="el" href="umbra_8h.html#a720d39f0f8f8c8fa23a8d100acf2b414">umbra_get_shadow_memory_type()</a> and <a class="el" href="umbra_8h.html#a372042a059dbdc71a4b045da3ff48cbb">umbra_shadow_memory_is_shared()</a> to be umbra_shadow_memory_type_t rather than uint.</li>
-<li>Clarified the 2nd parameter to <a class="el" href="umbra_8h.html#a8a333fbe844ebf9f9b8a12316b1c0b0d">umbra_create_shadow_memory()</a> to be umbra_shadow_memory_flags_t rather than uint.</li>
+<li>Clarified the final parameter to <a class="el" href="umbra_8h.html#a39640bfcf17bab37f23d6a0319fa819f">umbra_get_shadow_memory_type()</a> and <a class="el" href="umbra_8h.html#ac5e932542a171f8d68ed770192d88d86">umbra_shadow_memory_is_shared()</a> to be umbra_shadow_memory_type_t rather than uint.</li>
+<li>Clarified the 2nd parameter to <a class="el" href="umbra_8h.html#a3ae53d3b06fb7ebd633c34a3eb9f3e7a">umbra_create_shadow_memory()</a> to be umbra_shadow_memory_flags_t rather than uint.</li>
 <li>Clarified the umbra_shadow_memory_info_t shadow_type field to be umbra_shadow_memory_type_t rather than uint.</li>
 <li>Clarified the umbra_map_options_t flags field to be umbra_map_flags_t rather than uint.</li>
 <li>Added static library versions of drsyscall and umbra.</li>
 <li>On Windows, handle leak detection (-check_handle_leaks) is now on by default in full mode. However, it is still experimental and conservative, placing leaks it's not sure about in potential_errors.txt.</li>
 <li>Added preliminary shadowing of xmm registers for better Visual Studio 2013 support.</li>
 <li>Added preliminary shadowing of mmx registers.</li>
-<li>Augmented the Dr. Syscall API for MacOS support by adding <a class="el" href="drsyscall_8h.html#ae4f49296a1d1aabecacf0526c0e5501e">drsys_cur_syscall_result()</a>, <a class="el" href="struct__drsys__arg__t.html#a3e6ca2fd9ff8f263f91c973eb215c84f">drsys_arg_t.value64</a>, and <a class="el" href="drsyscall_8h.html#a3d4973bf22cd6362392d984ab6e1d7ea">drsys_pre_syscall_arg64()</a>.</li>
+<li>Augmented the Dr. Syscall API for MacOS support by adding <a class="el" href="drsyscall_8h.html#aeb20978340e00baaec8f2dede1dd2b54">drsys_cur_syscall_result()</a>, <a class="el" href="struct__drsys__arg__t.html#a3e6ca2fd9ff8f263f91c973eb215c84f">drsys_arg_t.value64</a>, and <a class="el" href="drsyscall_8h.html#a73378110249240c44a8845700c0ec661">drsys_pre_syscall_arg64()</a>.</li>
 <li>The pause in cmd on a frontend error is now bypassable by -batch.</li>
 <li>Added an option -exit_code_if_errors to return a non-zero exit code when errors are detected.</li>
 <li>Replaced the perl front-end <code>drmemory.pl</code> on Linux with an executable.</li>
@@ -339,5 +339,5 @@ Interoperability</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.19621 --- Fri Jan 12 2024 03:08:32 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.19737 --- Fri Jan 26 2024 03:09:26 &nbsp; <img border=0 src="favicon.png">
 </small></address>
