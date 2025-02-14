@@ -117,7 +117,7 @@ Building Candidate Packages</h2>
 <div class="line">ctest -D CMAKE_SYSTEM_PROCESSOR=arm -V -S /work/drmemory_package/package.cmake,drmem_only;32_only;build=2;cacheappend=TOOL_VERSION_NUMBER:STRING=1.11.0;cacheappend=DRMF_VERSION:STRING=1.0.0;cacheappend=CMAKE_TOOLCHAIN_FILE=/work/drmemory/git/src/dynamorio/make/toolchain-arm32.cmake;cpackappend=set\(CPACK_PACKAGE_FILE_NAME\ DrMemory-ARM-Linux-EABIHF-1.11.0-2\);cacheappend=VERSION_NUMBER:STRING=6.2.0</div>
 </div><!-- fragment --><p>Android:</p>
 <div class="fragment"><div class="line">cd /work/drmemory/build_package/</div>
-<div class="line">ctest -D CMAKE_SYSTEM_PROCESSOR=arm -V -S /work/drmemory_package/package.cmake,drmem_only;32_only;build=2;cacheappend=TOOL_VERSION_NUMBER:STRING=1.11.0;cacheappend=DRMF_VERSION:STRING=1.0.0;cacheappend=CMAKE_TOOLCHAIN_FILE=/work/drmemory/git/src/dynamorio/make/toolchain-android.cmake;cacheappend=ANDROID_TOOLCHAIN=/work/toolchain/android-ndk-21;cpackappend=set\(CPACK_PACKAGE_FILE_NAME\ DrMemory-ARM-Android-EABI-1.11.0-2\);cacheappend=VERSION_NUMBER:STRING=6.2.0</div>
+<div class="line">ctest -D CMAKE_SYSTEM_PROCESSOR=arm -V -S /work/drmemory_package/package.cmake,drmem_only;32_only;build=2;cacheappend=TOOL_VERSION_NUMBER:STRING=1.11.0;cacheappend=DRMF_VERSION:STRING=1.0.0;cacheappend=CMAKE_TOOLCHAIN_FILE=/work/drmemory/git/src/dynamorio/make/toolchain-android-gcc.cmake;cacheappend=ANDROID_TOOLCHAIN=/work/toolchain/android-ndk-21;cpackappend=set\(CPACK_PACKAGE_FILE_NAME\ DrMemory-ARM-Android-EABI-1.11.0-2\);cacheappend=VERSION_NUMBER:STRING=6.2.0</div>
 </div><!-- fragment --><p>On MacOS:</p>
 <div class="fragment"><div class="line">cd ~/drmemory/build_package</div>
 <div class="line">ctest -V -S /drmemory_package/package.cmake,drmem_only;32_only;build=2;cacheappend=TOOL_VERSION_NUMBER:STRING=1.11.0;cacheappend=DRMF_VERSION:STRING=1.0.0;cpackappend=set\(CPACK_PACKAGE_FILE_NAME\ DrMemory-MacOS-1.11.0-2\);cacheappend=VERSION_NUMBER:STRING=6.2.0</div>
@@ -140,5 +140,5 @@ Update Documentation</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.20125 --- Fri Feb 7 2025 03:15:39 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.20133 --- Fri Feb 14 2025 17:42:33 &nbsp; <img border=0 src="favicon.png">
 </small></address>
