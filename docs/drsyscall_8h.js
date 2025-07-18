@@ -12,10 +12,6 @@
     [ "drsys_options_t", "drsyscall_8h.html#a6037913f370bc62200d73cd3bed6eb90", null ],
     [ "drsys_syscall_t", "drsyscall_8h.html#ab0c3754725bdec08ed2ba10ce5e0a70f", null ],
     [ "drsys_sysnum_t", "drsyscall_8h.html#ac1684ff6465dbcf70de6e1b04a1cea32", null ],
-    [ "DRMGR_PRIORITY_PRESYS_DRSYS", "drsyscall_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba179104300f12ecd050332f3441838b51", null ],
-    [ "DRMGR_PRIORITY_POSTSYS_DRSYS", "drsyscall_8h.html#a06fc87d81c62e9abb8790b6e5713c55baab7d918613c5e1773fda02845ab33f07", null ],
-    [ "DRMGR_PRIORITY_POSTSYS_DRSYS_LAST", "drsyscall_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba3846a3da09148d154362a8b1b756b572", null ],
-    [ "DRMGR_PRIORITY_MODLOAD_DRSYS", "drsyscall_8h.html#a06fc87d81c62e9abb8790b6e5713c55baa805229054c9ea0bd956ec60fd3f148a", null ],
     [ "drsys_gateway_t", "drsyscall_8h.html#afb6afc6d2d961de74816bcd7c3561709", null ],
     [ "drsys_param_mode_t", "drsyscall_8h.html#aae53f35a45772ead54b9dd29db92c831", [
       [ "DRSYS_PARAM_IN", "drsyscall_8h.html#aae53f35a45772ead54b9dd29db92c831ad70df0ce77ca0bd28f4aaaa6d96d3dc0", null ],

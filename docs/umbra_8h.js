@@ -8,7 +8,6 @@
     [ "umbra_map_options_t", "umbra_8h.html#a02f06c9a73ed394fd9ac892b5b9ecfb0", null ],
     [ "umbra_map_t", "umbra_8h.html#ad20b7206ae18024a3a7b1ae23b71f196", null ],
     [ "umbra_shadow_memory_info_t", "umbra_8h.html#a3ed35b3fd203df8da97d324b87c3ec14", null ],
-    [ "DRMGR_PRIORITY_EXCPT_UMBRA", "umbra_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a28b395ded58393f41fcab8be32479122", null ],
     [ "umbra_map_flags_t", "umbra_8h.html#aaa9d16970f73407af0af6b173afd62b6", [
       [ "UMBRA_MAP_CREATE_SHADOW_ON_TOUCH", "umbra_8h.html#aaa9d16970f73407af0af6b173afd62b6a16bca8c68c5e970c4457b64606a9671b", null ],
       [ "UMBRA_MAP_SHADOW_SHARED_READONLY", "umbra_8h.html#aaa9d16970f73407af0af6b173afd62b6ae42e8acda254c7bf3a3b196d070a284d", null ]

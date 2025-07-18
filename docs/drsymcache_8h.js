@@ -1,9 +1,6 @@
 [
     [ "DRMGR_PRIORITY_NAME_DRSYMCACHE", "drsymcache_8h.html#adc95919cd07bac508f721b4bc93e454a", null ],
     [ "DRMGR_PRIORITY_NAME_DRSYMCACHE_SAVE", "drsymcache_8h.html#add1ab24936340d4f84a0fac0e0534cc6", null ],
-    [ "DRMGR_PRIORITY_MODLOAD_DRSYMCACHE_READ", "drsymcache_8h.html#a99fb83031ce9923c84392b4e92f956b5acfb1d8a854df37dc441c21d369f96ad3", null ],
-    [ "DRMGR_PRIORITY_MODLOAD_DRSYMCACHE_SAVE", "drsymcache_8h.html#a99fb83031ce9923c84392b4e92f956b5a5a2ca67cff95fa3d359b2aca49d94aa8", null ],
-    [ "DRMGR_PRIORITY_MODUNLOAD_DRSYMCACHE", "drsymcache_8h.html#a99fb83031ce9923c84392b4e92f956b5a4e2b00bf43d9684380879406f4a3e623", null ],
     [ "drsymcache_add", "drsymcache_8h.html#a098117d857d04e45ec07ee6caa55f11d", null ],
     [ "drsymcache_exit", "drsymcache_8h.html#ac93f61aab50f0b1e2da8c08d8108d3d6", null ],
     [ "drsymcache_free_lookup", "drsymcache_8h.html#aad3e71b21256e238628bdb689bcc8c1f", null ],
