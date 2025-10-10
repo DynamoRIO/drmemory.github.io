@@ -80,7 +80,8 @@ var NAVTREE =
       [ "Calling Conventions", "page_fuzzer.html#sec_calling_conventions", null ],
       [ "Mutator", "page_fuzzer.html#sec_mutator", null ],
       [ "Dumping and Loading Fuzz Input Data", "page_fuzzer.html#sec_dump_load", null ],
-      [ "Corpus-Based Fuzzing", "page_fuzzer.html#sec_corpus", null ]
+      [ "Corpus-Based Fuzzing", "page_fuzzer.html#sec_corpus", null ],
+      [ "Per-Iteration Leak Scanning", "page_fuzzer.html#sec_per_iter_leak_scan", null ]
     ] ],
     [ "Code Coverage", "page_coverage.html", [
       [ "Enabling Coverage Information", "page_coverage.html#sec_enable", null ],
@@ -101,7 +102,7 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Dr. Memory Runtime Option Reference", "page_options.html", null ],
-    [ "Release Notes for Version 2.3.20282", "page_release_notes.html", [
+    [ "Release Notes for Version 2.3.20368", "page_release_notes.html", [
       [ "Distribution Contents", "page_release_notes.html#sec_package", null ],
       [ "Changes Since Prior Releases", "page_release_notes.html#sec_changes", null ],
       [ "Limitations", "page_release_notes.html#sec_limits", [

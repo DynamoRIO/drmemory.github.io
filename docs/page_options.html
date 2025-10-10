@@ -549,7 +549,10 @@ Use this option to constrain mutation to a subset of buffer bytes starting at th
 Skip fuzzing for the specified number of target invocations.</li>
 <li><b> -fuzz_stat_freq </b> &lt;int&gt; <br  />
 <em>default: 0 (minimum: 0, maximum: UINT_MAX)</em> <br  />
-Specify the fuzzer status log frequency in number of fuzz iterations (no status is logged when this option is not set). </li>
+Specify the fuzzer status log frequency in number of fuzz iterations (no status is logged when this option is not set).</li>
+<li><b> -fuzz_per_iter_leak_scan </b> <br  />
+<em>default: false</em> <br  />
+Saves the fuzz input that triggered a leak to the current log directory. The name of the file is included in the error report summary. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -558,5 +561,5 @@ Specify the fuzzer status log frequency in number of fuzz iterations (no status 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.20282 --- Fri Oct 3 2025 03:24:00 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  Dr. Memory version 2.3.20368 --- Fri Oct 10 2025 03:27:40 &nbsp; <img border=0 src="favicon.png">
 </small></address>
